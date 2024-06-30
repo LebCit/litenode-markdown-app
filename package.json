@@ -1,0 +1,23 @@
+{
+  "name": "litenode-markdown-app",
+  "version": "1.0.0",
+  "description": "A comprehensive tutorial on creating a Markdown-based application using LiteNode in Node.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node functions/build.js"
+  },
+  "keywords": [
+    "node.js",
+    "litenode",
+    "markdown"
+  ],
+  "author": "LebCit",
+  "license": "MIT",
+  "dependencies": {
+    "highlight.js": "^11.9.0",
+    "litenode": "^2.1.0",
+    "marked": "^13.0.0",
+    "marked-highlight": "^2.1.2"
+  }
+}
