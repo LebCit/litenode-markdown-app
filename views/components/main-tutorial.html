@@ -1,0 +1,43 @@
+<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>{{mainMenu}}</span>
+			{{#each mainMenu}}
+			<details open>
+				<summary>{{key}}</summary>
+				<sub-categories>
+					<ul>
+						{{#each1 value}}
+						<li>
+							<a href="/tutorial/{{href}}">{{metadata.subcategory}}</a>
+						</li>
+						{{/each1}}
+					</ul>
+				</sub-categories>
+			</details>
+			{{/each}}
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad">{{html_content}}</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		{{#if tocLength > 9}}
+		<toc-nav>
+			<h2>Content</h2>
+			{{html_toc}}
+		</toc-nav>
+		{{/if}}
+	</toc-sidebar>
+</main>
