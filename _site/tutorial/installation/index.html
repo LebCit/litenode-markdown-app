@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Installing needed dependencies to create a Markdown application with LiteNode." />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>Installation | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Installing needed dependencies</h1>
+
+<p>Dependencies in Node.js are pre-made functionalities that an application depends on to work. A dependency can be as simple as a function that returns a message or a library shipping multiple helper functions.</p>
+<p>When an application depends on multiple dependencies, it becomes heavier and more exposed to conflicts among them. Be very cautious when selecting dependencies for an application, ensuring they are well-maintained and compatible. Another aspect to check is how many dependencies a package relies on to avoid heavy, unmaintained, or incompatible scripts.</p>
+<p>You can check various aspects of a dependency by visiting <a href="https://packagephobia.com/">PackagePhobia</a>, which also provides a link to the <a href="https://npmgraph.js.org/">NPM Graph</a> for the inspected package.</p>
+<h2 id="dependency-type">Dependency Types</h2>
+
+<p>In Node.js, dependencies are managed using package managers like <a href="https://www.npmjs.com/">npm</a> (Node Package Manager), <a href="https://yarnpkg.com/">Yarn</a>, or <a href="https://pnpm.io/">PNPM</a>. There are mainly two types of dependencies you encounter in Node.js projects:</p>
+<ol>
+<li><p><strong>Regular Dependencies (Dependencies):</strong></p>
+<ul>
+<li>These are packages that your project needs to run in production. They are essential for the basic functionality of your application.</li>
+<li>When you install a regular dependency using npm (<code>npm install &lt;package-name&gt;</code> or <code>npm i &lt;package-name&gt;</code>), it gets added to your <code>package.json</code> file under the <code>&quot;dependencies&quot;</code> section.</li>
+<li><strong>Example</strong>: LiteNode for building web applications, Marked for parsing Markdown files content, etc.</li>
+</ul>
+</li>
+<li><p><strong>Development Dependencies (DevDependencies):</strong></p>
+<ul>
+<li>These are packages that are only needed for development and testing purposes, not for running your application in production.</li>
+<li>Development dependencies include tools like testing frameworks (e.g., Jest, Mocha), code linters (e.g., ESLint), build tools (e.g., Webpack), etc.</li>
+<li>When you install a development dependency (<code>npm install --save-dev &lt;package-name&gt;</code> or <code>npm i -D &lt;package-name&gt;</code>), it gets added to your <code>package.json</code> file under the <code>&quot;devDependencies&quot;</code> section.</li>
+</ul>
+</li>
+</ol>
+<h3 id="managing-dependencies">Managing Dependencies</h3>
+
+<ul>
+<li><strong>Installing Dependencies:</strong> You install dependencies using npm, Yarn, or PNPM. npm is the default package manager for Node.js, while Yarn and PNPM offer additional features for dependency management.</li>
+<li><strong>Package.json:</strong> This file in your project directory contains metadata about your project and a list of dependencies. It also includes scripts, versioning information, and other metadata.</li>
+<li><strong>Versioning:</strong> Managing versions of dependencies is crucial to ensure the compatibility and stability of your application. You can specify versions in <code>package.json</code> using semantic versioning (<code>^</code>, <code>~</code>, <code>&gt;=</code>, etc.) to control how updates are handled.</li>
+</ul>
+<h3 id="example">Example</h3>
+
+<p>Here’s a simplified <code>package.json</code> file demonstrating dependencies and devDependencies:</p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;my-nodejs-app&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1.0.0&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;dependencies&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;litenode&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;^2.0.0&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;marked&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;^13.0.0&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;devDependencies&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;jest&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;^29.7.0&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;eslint&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;^9.5.0&quot;</span>
+    <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre><ul>
+<li>In this example, <code>litenode</code> and <code>marked</code> are regular dependencies required for the application to run.</li>
+<li><code>jest</code> and <code>eslint</code> are development dependencies used for testing and code linting during development.</li>
+</ul>
+<p>Managing dependencies effectively ensures your Node.js application remains functional, secure, and maintainable across different environments and updates.</p>
+<h2 id="our-dependencies">Our Dependencies</h2>
+
+<p>For our application, we will need:</p>
+<ol>
+<li><a href="https://www.npmjs.com/package/litenode">LiteNode</a>: The Node.js Web framework that loves Markdown.</li>
+<li><a href="https://www.npmjs.com/package/marked">Marked</a>: The markdown parser and compiler. Built for speed.</li>
+<li><a href="https://www.npmjs.com/package/highlight.js">highlight.js</a>: The Internet&#39;s favorite JavaScript syntax highlighter.</li>
+<li><a href="https://www.npmjs.com/package/marked-highlight">marked-highlight</a>: Highlights code blocks parsed with Marked using highlight.js.</li>
+</ol>
+<p>Given that our application will include code blocks, it&#39;s preferable to highlight them. Otherwise, we would only require <code>LiteNode</code> and <code>Marked</code>. While you can utilize other Markdown parsers and syntax highlighters, I recommend using <code>Marked</code> and <code>highlight.js</code>.</p>
+<h2 id="root-directory">Root Directory</h2>
+
+<p>Assuming you have Node.js installed on your machine with a package manager (I use npm), we are now ready to start coding:</p>
+<ol>
+<li>Create a folder called <code>litenode-markdown-app</code> in the location of your choice.</li>
+<li>Open this folder with a code editor.</li>
+</ol>
+<p>For easier Markdown handling, choose a code editor that natively supports Markdown, such as <a href="https://code.visualstudio.com/">VS Code</a> or <a href="https://vscodium.com/">VS Codium</a>, or supports it via plugins like <a href="https://www.sublimetext.com/">Sublime Text</a>.</p>
+<h2 id="the-terminal">The Terminal</h2>
+
+<p>In modern code editors like VS Code, you can use integrated terminals that support various command-line interfaces such as <a href="https://git-scm.com/">Git Bash</a> or <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4">PowerShell</a>. Here’s how you can use each:</p>
+<ol>
+<li><p><strong>Git Bash:</strong></p>
+<ul>
+<li>Git Bash is a command-line interface for Git on Windows, providing a Unix-like shell experience.</li>
+<li>Many developers prefer Git Bash because it offers familiar Unix commands and utilities.</li>
+<li>To use Git Bash in your code editor&#39;s integrated terminal:<ul>
+<li>Ensure Git Bash is installed on your system.</li>
+<li>Open your code editor (e.g., VS Code).</li>
+<li>Open the integrated terminal (View &gt; Terminal).</li>
+<li>Choose Git Bash as the default terminal shell (you can set this in the terminal dropdown or configure it in settings).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>PowerShell:</strong></p>
+<ul>
+<li>PowerShell is a powerful command-line shell and scripting language developed by Microsoft.</li>
+<li>It is the default shell in Windows and provides extensive scripting capabilities.</li>
+<li>To use PowerShell in your code editor&#39;s integrated terminal:<ul>
+<li>Open your code editor (e.g., VS Code).</li>
+<li>Open the integrated terminal (View &gt; Terminal).</li>
+<li>Choose PowerShell as the default terminal shell (you can set this in the terminal dropdown or configure it in settings).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Benefits of Using Integrated Terminals:</strong></p>
+<ul>
+<li><strong>Efficiency:</strong> You can execute Git commands, run scripts, and perform various tasks without leaving your code editor.</li>
+<li><strong>Integration:</strong> Access project-specific commands and tools directly within your development environment.</li>
+<li><strong>Consistency:</strong> Ensure consistent behavior and environment configuration across team members using the same setup.</li>
+</ul>
+<p>Using Git Bash or PowerShell in your code editor’s integrated terminal streamlines development workflows by providing powerful command-line capabilities directly within your <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>, enhancing productivity and consistency.</p>
+<h2 id="initialization">Initialization</h2>
+
+<p>In the <a href="#the-terminal">integrated terminal</a> of your code editor, type (then press Enter):</p>
+<pre><code class="hljs language-bash">npm init -y
+</code></pre><p>This will initialize a new Node.js project with default settings in a <code>package.json</code> file, skipping the interactive questionnaire that normally prompts for project details. The <code>init</code> command initializes a new npm package in the current directory. It sets up a <code>package.json</code> file, which is a metadata file for our project that includes information like project name, version, dependencies, and other settings. The <code>-y</code> flag stands for &quot;yes&quot;. When used with <code>npm init</code>, it automatically accepts all default values for the prompts that would normally be presented during the initialization process.</p>
+<p>The created <code>package.json</code> looks like this:</p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;litenode-markdown-app&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1.0.0&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;main&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;index.js&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;scripts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;test&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;keywords&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;author&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;license&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ISC&quot;</span>
+<span class="hljs-punctuation">}</span>
+</code></pre><h2 id="installation">Installation</h2>
+
+<p>Let the fun begin!</p>
+<p>In the <a href="#the-terminal">integrated terminal</a> of your code editor, type (then press Enter):</p>
+<pre><code class="hljs language-bash">npm i litenode marked highlight.js marked-highlight
+</code></pre><p>This will install the packages as dependencies. We could have installed them as development dependencies since we are developing locally and the final goal is to generate a static site where none of them will be present or needed, but let&#39;s proceed as if we were on a live server where they&#39;ll be required for our application to work.</p>
+<h2 id="next">Next</h2>
+
+<p>In the next section, we will delve into the <a href="/tutorial/process">process</a> of how our application functions.</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#dependency-type">Dependency Types</a><ul><li><a href="#managing-dependencies">Managing Dependencies</a><li><a href="#example">Example</a></ul></li><li><a href="#our-dependencies">Our Dependencies</a><li><a href="#root-directory">Root Directory</a><li><a href="#the-terminal">The Terminal</a><li><a href="#initialization">Initialization</a><li><a href="#installation">Installation</a><li><a href="#next">Next</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Embracing simplicity and efficiency with Static Site Generation (SSG)" />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>Static Site | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Static Sites: Embrace the Essence of the Web!</h1>
+
+<p>Static sites are popular for their simplicity, efficiency, and several advantages over traditional dynamic websites. Unlike dynamic sites that generate content on the fly, static sites are pre-rendered HTML, CSS, and JavaScript files that are served directly to users&#39; browsers. This approach offers several benefits:</p>
+<ol>
+<li><p><strong>Speed and Performance</strong>: Static sites load faster due to the absence of server-side processing or database queries, resulting in quicker page loads and a smoother user experience.</p>
+</li>
+<li><p><strong>Security</strong>: With no server-side processing or database interactions, static sites are inherently more secure against vulnerabilities like SQL injection or server attacks.</p>
+</li>
+<li><p><strong>Scalability</strong>: They handle high traffic volumes more efficiently because each page is a simple file served by a web server, reducing server load and enabling seamless scaling.</p>
+</li>
+<li><p><strong>Simplicity and Lower Costs</strong>: Building and maintaining static sites is often simpler and less resource-intensive compared to dynamic sites. They require minimal server resources and can be hosted inexpensively on content delivery networks (CDNs).</p>
+</li>
+<li><p><strong>Reliability</strong>: Since static sites are composed of static files, they are less prone to downtime or performance issues caused by server-side problems.</p>
+</li>
+<li><p><strong>SEO Friendliness</strong>: Pre-rendered content makes it easier for search engines to crawl and index pages, potentially improving search engine rankings.</p>
+</li>
+</ol>
+<p>Overall, static sites offer a robust solution for many use cases, providing speed, security, and scalability while simplifying development and maintenance efforts.</p>
+<h2 id="generating">Generating</h2>
+
+<p>Let&#39;s convert our content into a static site using LiteNode&#39;s <a href="https://litenode.pages.dev/docs/rendering-templates/#rendertofile">renderToFile</a> method, which makes this process simple and straightforward. While there are many approaches to generating a static site and numerous considerations for error handling, this tutorial focuses on the basics due to the simplicity of our small application. I&#39;ll walk you through the fundamental steps without additional complexities or enhancements.</p>
+<h2 id="build-script">Build Script</h2>
+
+<p>Create a file named <code>build.js</code> in the <code>functions</code> directory and add the following code:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">LiteNode</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;litenode&quot;</span>
+<span class="hljs-keyword">import</span> { markedParseAndHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./markedParseAndHighlight.js&quot;</span>
+<span class="hljs-keyword">import</span> { cp, mkdir, rm } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;node:fs/promises&quot;</span>
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LiteNode</span>()
+
+<span class="hljs-keyword">const</span> pages = <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">parseMarkdownFileS</span>(<span class="hljs-string">&quot;pages&quot;</span>)
+<span class="hljs-keyword">const</span> titles = <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">extractMarkdownProperties</span>(pages, [<span class="hljs-string">&quot;title&quot;</span>, <span class="hljs-string">&quot;href&quot;</span>])
+titles.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> (a.<span class="hljs-property">title</span> &lt; b.<span class="hljs-property">title</span> ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>))
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">build</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// Remove existing &quot;_site&quot; directory if it exists</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">rm</span>(<span class="hljs-string">&quot;_site&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">force</span>: <span class="hljs-literal">true</span> })
+
+        <span class="hljs-comment">// Create output directories</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">&quot;_site&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">&quot;_site/static&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+
+        <span class="hljs-comment">// Copy static folder to _site/static</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">cp</span>(<span class="hljs-string">&quot;static&quot;</span>, <span class="hljs-string">&quot;_site/static&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+
+        <span class="hljs-comment">// Define function to create the main route</span>
+        <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createMainRoute</span>(<span class="hljs-params"></span>) {
+            <span class="hljs-keyword">const</span> parsedIndex = app.<span class="hljs-title function_">parseMarkdownFile</span>(<span class="hljs-string">&quot;index.md&quot;</span>)
+            <span class="hljs-keyword">const</span> html_content = markedParseAndHighlight.<span class="hljs-title function_">parse</span>(parsedIndex.<span class="hljs-property">content</span>)
+            <span class="hljs-keyword">const</span> { title, description } = parsedIndex.<span class="hljs-property">frontmatter</span>
+
+            <span class="hljs-comment">// Create &quot;index.html&quot; in &quot;_site&quot; directory</span>
+            <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">renderToFile</span>(
+                <span class="hljs-string">&quot;layouts/index.html&quot;</span>,
+                {
+                    title,
+                    description,
+                    html_content,
+                    <span class="hljs-attr">entryRoute</span>: <span class="hljs-literal">true</span>,
+                    titles,
+                },
+                <span class="hljs-string">&quot;_site/index.html&quot;</span>
+            )
+        }
+
+        <span class="hljs-comment">// Define function to create each page route</span>
+        <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createPageRoute</span>(<span class="hljs-params"></span>) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> page <span class="hljs-keyword">of</span> pages) {
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-keyword">const</span> fileFrontmatter = page.<span class="hljs-property">frontmatter</span>
+
+                    <span class="hljs-comment">// Added to output each page in a directory matching its href</span>
+                    <span class="hljs-keyword">const</span> fileHREF = fileFrontmatter.<span class="hljs-property">href</span>
+                    <span class="hljs-comment">// Create a folder for each page</span>
+                    <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">`_site/page/<span class="hljs-subst">${fileHREF}</span>`</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+
+                    <span class="hljs-keyword">const</span> htmlContent = markedParseAndHighlight.<span class="hljs-title function_">parse</span>(page.<span class="hljs-property">content</span>)
+                    <span class="hljs-keyword">const</span> toc = app.<span class="hljs-title function_">generateTOC</span>(htmlContent)
+
+                    <span class="hljs-comment">// Create HTML file out of each page</span>
+                    <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">renderToFile</span>(
+                        <span class="hljs-string">&quot;layouts/index.html&quot;</span>,
+                        {
+                            <span class="hljs-attr">description</span>: fileFrontmatter.<span class="hljs-property">description</span>,
+                            <span class="hljs-attr">title</span>: fileFrontmatter.<span class="hljs-property">title</span>,
+                            <span class="hljs-attr">html_content</span>: htmlContent,
+                            titles,
+                            <span class="hljs-attr">pageRoute</span>: <span class="hljs-literal">true</span>,
+                            <span class="hljs-attr">html_toc</span>: toc,
+                        },
+                        <span class="hljs-string">`_site/page/<span class="hljs-subst">${fileHREF}</span>/index.html`</span>
+                    )
+                } <span class="hljs-keyword">catch</span> (error) {
+                    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Error processing page: <span class="hljs-subst">${page.fileName}</span>`</span>, error)
+                }
+            }
+        }
+
+        <span class="hljs-comment">// Execute the route creation functions</span>
+        <span class="hljs-title function_">createMainRoute</span>()
+        <span class="hljs-title function_">createPageRoute</span>()
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&quot;Build error:&quot;</span>, error)
+    }
+}
+
+<span class="hljs-title function_">build</span>()
+</code></pre><h2 id="build-explanation">Build Explanation</h2>
+
+<p>Let&#39;s break down the <code>build.js</code> script into smaller sections and explain each part:</p>
+<h3 id="import-and-initialize">Import and Initialize</h3>
+
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">LiteNode</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;litenode&quot;</span>
+<span class="hljs-keyword">import</span> { markedParseAndHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./markedParseAndHighlight.js&quot;</span>
+<span class="hljs-keyword">import</span> { cp, mkdir, rm } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;node:fs/promises&quot;</span>
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LiteNode</span>()
+</code></pre><p>In this section:</p>
+<ul>
+<li>We import the <code>LiteNode</code> framework, <code>markedParseAndHighlight</code> module, and some file system methods from Node.js.</li>
+<li>An instance of <code>LiteNode</code> is created.</li>
+</ul>
+<h3 id="parse-and-sort">Parse and Sort</h3>
+
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> pages = <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">parseMarkdownFileS</span>(<span class="hljs-string">&quot;pages&quot;</span>)
+<span class="hljs-keyword">const</span> titles = <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">extractMarkdownProperties</span>(pages, [<span class="hljs-string">&quot;title&quot;</span>, <span class="hljs-string">&quot;href&quot;</span>])
+titles.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> (a.<span class="hljs-property">title</span> &lt; b.<span class="hljs-property">title</span> ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>))
+</code></pre><p>In this section:</p>
+<ul>
+<li>We use <code>parseMarkdownFileS</code> to parse all markdown files in the &#39;pages&#39; directory.</li>
+<li>The <code>extractMarkdownProperties</code> method extracts the <code>title</code> and <code>href</code> properties from the parsed pages.</li>
+<li>The <code>titles</code> array is sorted alphabetically by the title.</li>
+</ul>
+<h3 id="build-function">Build Function</h3>
+
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">build</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// Remove existing &quot;_site&quot; directory if it exists</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">rm</span>(<span class="hljs-string">&quot;_site&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">force</span>: <span class="hljs-literal">true</span> })
+
+        <span class="hljs-comment">// Create output directories</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">&quot;_site&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">&quot;_site/static&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+
+        <span class="hljs-comment">// Copy static folder to _site/static</span>
+        <span class="hljs-keyword">await</span> <span class="hljs-title function_">cp</span>(<span class="hljs-string">&quot;static&quot;</span>, <span class="hljs-string">&quot;_site/static&quot;</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+</code></pre><p>In this section:</p>
+<ul>
+<li>The <code>build</code> function is defined.</li>
+<li>If the <code>_site</code> directory exists, it&#39;s removed.</li>
+<li>New <code>_site</code> and <code>_site/static</code> directories are created.</li>
+<li>The <code>static</code> folder is copied to <code>_site/static</code>.</li>
+</ul>
+<h3 id="create-main-route">Create Main Route</h3>
+
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Define function to create the main route</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createMainRoute</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> parsedIndex = app.<span class="hljs-title function_">parseMarkdownFile</span>(<span class="hljs-string">&quot;index.md&quot;</span>)
+    <span class="hljs-keyword">const</span> html_content = markedParseAndHighlight.<span class="hljs-title function_">parse</span>(parsedIndex.<span class="hljs-property">content</span>)
+    <span class="hljs-keyword">const</span> { title, description } = parsedIndex.<span class="hljs-property">frontmatter</span>
+
+    <span class="hljs-comment">// Create &quot;index.html&quot; in &quot;_site&quot; directory</span>
+    <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">renderToFile</span>(
+        <span class="hljs-string">&quot;layouts/index.html&quot;</span>,
+        {
+            title,
+            description,
+            html_content,
+            <span class="hljs-attr">entryRoute</span>: <span class="hljs-literal">true</span>,
+            titles,
+        },
+        <span class="hljs-string">&quot;_site/index.html&quot;</span>
+    )
+}
+</code></pre><p>In this section:</p>
+<ul>
+<li>The <code>createMainRoute</code> function is defined to handle the main route.</li>
+<li>The <code>index.md</code> file is parsed.</li>
+<li>The content is converted to HTML using <code>markedParseAndHighlight</code>.</li>
+<li>The title and description are extracted from the frontmatter.</li>
+<li>An <code>index.html</code> file is created in the <code>_site</code> directory using the specified layout and data.</li>
+</ul>
+<h3 id="create-page-routes">Create Page Routes</h3>
+
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Define function to create each page route</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createPageRoute</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> page <span class="hljs-keyword">of</span> pages) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">const</span> fileFrontmatter = page.<span class="hljs-property">frontmatter</span>
+
+            <span class="hljs-comment">// Added to output each page in a directory matching its href</span>
+            <span class="hljs-keyword">const</span> fileHREF = fileFrontmatter.<span class="hljs-property">href</span>
+            <span class="hljs-comment">// Create a folder for each page</span>
+            <span class="hljs-keyword">await</span> <span class="hljs-title function_">mkdir</span>(<span class="hljs-string">`_site/page/<span class="hljs-subst">${fileHREF}</span>`</span>, { <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span> })
+
+            <span class="hljs-keyword">const</span> htmlContent = markedParseAndHighlight.<span class="hljs-title function_">parse</span>(page.<span class="hljs-property">content</span>)
+            <span class="hljs-keyword">const</span> toc = app.<span class="hljs-title function_">generateTOC</span>(htmlContent)
+
+            <span class="hljs-comment">// Create HTML file out of each page</span>
+            <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">renderToFile</span>(
+                <span class="hljs-string">&quot;layouts/index.html&quot;</span>,
+                {
+                    <span class="hljs-attr">description</span>: fileFrontmatter.<span class="hljs-property">description</span>,
+                    <span class="hljs-attr">title</span>: fileFrontmatter.<span class="hljs-property">title</span>,
+                    <span class="hljs-attr">html_content</span>: htmlContent,
+                    titles,
+                    <span class="hljs-attr">pageRoute</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">html_toc</span>: toc,
+                },
+                <span class="hljs-string">`_site/page/<span class="hljs-subst">${fileHREF}</span>/index.html`</span>
+            )
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Error processing page: <span class="hljs-subst">${page.fileName}</span>`</span>, error)
+        }
+    }
+}
+</code></pre><p>In this section:</p>
+<ul>
+<li>The <code>createPageRoute</code> function is defined to handle each individual page route.</li>
+<li>For each page:<ul>
+<li>We extract the frontmatter.</li>
+<li>A directory is created for each page based on its <code>href</code>.</li>
+<li>The content is converted to HTML using <code>markedParseAndHighlight</code>.</li>
+<li>A Table of Contents (TOC) is generated.</li>
+<li>An HTML file is created for each page using the specified layout and data.</li>
+</ul>
+</li>
+</ul>
+<h3 id="execute-build">Execute Build</h3>
+
+<pre><code class="hljs language-javascript">        <span class="hljs-comment">// Execute the route creation functions</span>
+        <span class="hljs-title function_">createMainRoute</span>()
+        <span class="hljs-title function_">createPageRoute</span>()
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&quot;Build error:&quot;</span>, error)
+    }
+}
+
+<span class="hljs-title function_">build</span>()
+</code></pre><p>In this section:</p>
+<ul>
+<li>The <code>createMainRoute</code> and <code>createPageRoute</code> functions are called to create the necessary routes.</li>
+<li>Any errors during the build process are caught and logged.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+
+<p>To automate the build process, you can add a script to your <code>package.json</code> file. This will allow you to run the build command easily from the terminal.</p>
+<ol>
+<li>Open your <code>package.json</code> file.</li>
+<li>Add the following script under the &quot;scripts&quot; section:</li>
+</ol>
+<pre><code class="hljs language-json"><span class="hljs-attr">&quot;scripts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;build&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;node functions/build.js&quot;</span>
+<span class="hljs-punctuation">}</span>
+</code></pre><ol start="3">
+<li>Save the <code>package.json</code> file.</li>
+</ol>
+<p>Now, you can build your static site by running the following command in your terminal:</p>
+<pre><code class="hljs language-sh">npm run build
+</code></pre><p>Running this command executes the <code>build.js</code> script, generating your static site in the <code>_site</code> directory.</p>
+<h3 id="summary">Summary</h3>
+
+<ul>
+<li>This script automates building a static site, making it simple and efficient.</li>
+<li>It parses markdown files, sorts them, and generates HTML files using templates.</li>
+<li>It handles the main index route and individual page routes, creating necessary directories and copying static assets.</li>
+</ul>
+<h2 id="preview">Preview</h2>
+
+<p>To preview the content of the <code>_site</code> directory in a browser from an IDE like VS Code, you can follow these steps:</p>
+<ol>
+<li><p><strong>Install the Live Server Extension in VS Code:</strong></p>
+<ul>
+<li>Open VS Code and go to the Extensions view by clicking on the Extensions icon in the Sidebar or pressing <code>Ctrl+Shift+X</code>.</li>
+<li>Search for &quot;Live Server&quot; and install it.</li>
+</ul>
+</li>
+<li><p><strong>Open the <code>_site</code> Directory in VS Code:</strong></p>
+<ul>
+<li>Open the <code>_site</code> directory in VS Code by navigating to <code>File &gt; Open Folder...</code> and selecting the <code>_site</code> directory.</li>
+</ul>
+</li>
+<li><p><strong>Start Live Server:</strong></p>
+<ul>
+<li>Right-click on the <code>index.html</code> file inside the <code>_site</code> directory and select <code>Open with Live Server</code>.</li>
+<li>This will start a local development server and open your default browser to display the contents of the <code>_site</code> directory.</li>
+</ul>
+</li>
+</ol>
+<p>Alternatively, you can use other tools or IDEs with similar live server functionality.</p>
+<h2 id="publish">Publish</h2>
+
+<p>You can easily publish the <code>_site</code> directory content on various platforms that host static sites. Some popular options include:</p>
+<ol>
+<li><p><strong>Azure Static Web Apps:</strong></p>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/services/app-service/static/">Azure Static Web Apps</a> provides a streamlined hosting option for static sites with built-in CI/CD workflows.</li>
+</ul>
+</li>
+<li><p><strong>Cloudflare Pages:</strong></p>
+<ul>
+<li><a href="https://pages.cloudflare.com/">Cloudflare Pages</a> offers a fast, secure, and free way to deploy static sites directly from your Git repository.</li>
+</ul>
+</li>
+<li><p><strong>Deta Space:</strong></p>
+<ul>
+<li><a href="https://deta.space/">Deta Space</a> is a platform for hosting personal and collaborative apps, including static sites.</li>
+</ul>
+</li>
+<li><p><strong>GitHub Pages:</strong></p>
+<ul>
+<li><a href="https://pages.github.com/">GitHub Pages</a> allows you to host static sites directly from a GitHub repository. Simply push your <code>_site</code> directory to the <code>gh-pages</code> branch of your repository.</li>
+</ul>
+</li>
+<li><p><strong>GitLab Pages:</strong></p>
+<ul>
+<li><a href="https://about.gitlab.com/product/pages/">GitLab Pages</a> allows you to host static sites from a GitLab repository. Configure the <code>.gitlab-ci.yml</code> file to build and deploy your <code>_site</code> directory.</li>
+</ul>
+</li>
+<li><p><strong>Netlify:</strong></p>
+<ul>
+<li><a href="https://www.netlify.com/">Netlify</a> offers a simple way to deploy static sites. You can connect your repository, specify the build command (<code>npm run build</code>), and set the publish directory to <code>_site</code>.</li>
+</ul>
+</li>
+<li><p><strong>Render:</strong></p>
+<ul>
+<li><a href="https://render.com/">Render</a> provides a unified cloud platform to deploy static sites quickly and efficiently.</li>
+</ul>
+</li>
+<li><p><strong>Surge:</strong></p>
+<ul>
+<li><a href="https://surge.sh/">Surge</a> is a simple and straightforward platform for publishing static sites. Install the Surge CLI and deploy your <code>_site</code> directory with a single command.</li>
+</ul>
+</li>
+<li><p><strong>Vercel:</strong></p>
+<ul>
+<li><a href="https://vercel.com/">Vercel</a> provides seamless deployment for static sites. Connect your repository, and Vercel will automatically handle the build and deployment process. Set the output directory to <code>_site</code>.</li>
+</ul>
+</li>
+</ol>
+<p>By using these platforms, you can easily publish and share your static site with others.</p>
+<h2 id="bonus">Bonus</h2>
+
+<p>Don&#39;t stress about mastering Markdown syntax! To make things easier for you, I&#39;ve included a handy <a href="/tutorial/markdown-cheat-sheet">Markdown Cheat Sheet</a> as a bonus with this tutorial. Happy writing!</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#generating">Generating</a><li><a href="#build-script">Build Script</a><li><a href="#build-explanation">Build Explanation</a><ul><li><a href="#import-and-initialize">Import and Initialize</a><li><a href="#parse-and-sort">Parse and Sort</a><li><a href="#build-function">Build Function</a><li><a href="#create-main-route">Create Main Route</a><li><a href="#create-page-routes">Create Page Routes</a><li><a href="#execute-build">Execute Build</a><li><a href="#usage">Usage</a><li><a href="#summary">Summary</a></ul></li><li><a href="#preview">Preview</a><li><a href="#publish">Publish</a><li><a href="#bonus">Bonus</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>

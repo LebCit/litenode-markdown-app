@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Basic guide to mastering Markdown syntax for efficient content creation" />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>Markdown Cheat Sheet | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Markdown Cheat Sheet</h1>
+
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Here’s a quick reference to help you get started with Markdown.</p>
+<h2 id="headers">Headers</h2>
+
+<pre><code class="hljs language-markdown"><span class="hljs-section"># H1</span>
+
+<span class="hljs-section">## H2</span>
+
+<span class="hljs-section">### H3</span>
+
+<span class="hljs-section">#### H4</span>
+
+<span class="hljs-section">##### H5</span>
+
+<span class="hljs-section">###### H6</span>
+</code></pre><h2 id="emphasis">Emphasis</h2>
+
+<pre><code class="hljs language-markdown"><span class="hljs-emphasis">_Italic_</span>
+<span class="hljs-strong">**Bold**</span>
+<span class="hljs-strong">**<span class="hljs-emphasis">_Bold and Italic_</span>**</span>
+</code></pre><h2 id="lists">Lists</h2>
+
+<h3 id="unordered-list">Unordered List</h3>
+
+<pre><code class="hljs language-markdown"><span class="hljs-bullet">-</span>   Item 1
+<span class="hljs-bullet">-</span>   Item 2
+<span class="hljs-bullet">    -</span>   Sub Item 1
+<span class="hljs-bullet">    -</span>   Sub Item 2
+</code></pre><h3 id="ordered-list">Ordered List</h3>
+
+<pre><code class="hljs language-markdown"><span class="hljs-bullet">1.</span> Item 1
+<span class="hljs-bullet">2.</span> Item 2
+<span class="hljs-bullet">    1.</span> Sub Item 1
+<span class="hljs-bullet">    2.</span> Sub Item 2
+</code></pre><h2 id="links">Links</h2>
+
+<pre><code class="hljs language-markdown">[<span class="hljs-string">Link Text</span>](<span class="hljs-link">https://example.com</span>)
+</code></pre><h2 id="images">Images</h2>
+
+<pre><code class="hljs language-markdown">![<span class="hljs-string">Alt Text</span>](<span class="hljs-link">https://example.com/image.jpg</span>)
+</code></pre><h2 id="blockquotes">Blockquotes</h2>
+
+<pre><code class="hljs language-markdown"><span class="hljs-quote">&gt; This is a blockquote.</span>
+</code></pre><h2 id="code">Code</h2>
+
+<h3 id="inline-code">Inline Code</h3>
+
+<pre><code class="hljs language-markdown"><span class="hljs-code">`inline code`</span>
+</code></pre><h3 id="code-block">Code Block</h3>
+
+<pre><code class="hljs language-markdown"><span class="hljs-code">```json
+{
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;Smith&quot;,
+    &quot;age&quot;: 25
+}
+```</span>
+</code></pre><h2 id="tables">Tables</h2>
+
+<pre><code class="hljs language-markdown">| Header 1    | Header 2    |
+| ----------- | ----------- |
+| Row 1 Col 1 | Row 1 Col 2 |
+| Row 2 Col 1 | Row 2 Col 2 |
+</code></pre><h2 id="horizontal-rules">Horizontal Rules</h2>
+
+<pre><code class="hljs language-markdown">---
+</code></pre><h2 id="task-lists">Task Lists</h2>
+
+<pre><code class="hljs language-markdown"><span class="hljs-bullet">-</span>   [x] Completed Task
+<span class="hljs-bullet">-</span>   [ ] Incomplete Task
+</code></pre><h2 id="including-metadata">Including Metadata</h2>
+
+<p>Some static site generators allow including metadata in the Markdown files&#39; frontmatter; LiteNode handles it natively:</p>
+<pre><code class="hljs language-yaml">---
+title: &quot;Markdown Cheat Sheet&quot;
+description: &quot;Basic guide to mastering Markdown syntax for efficient content creation&quot;
+tags: [&quot;Markdown Syntax&quot;]
+---
+</code></pre><p>By mastering these Markdown basics, you&#39;ll be able to create well-structured and formatted content efficiently.</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#headers">Headers</a><li><a href="#emphasis">Emphasis</a><li><a href="#lists">Lists</a><ul><li><a href="#unordered-list">Unordered List</a><li><a href="#ordered-list">Ordered List</a></ul></li><li><a href="#links">Links</a><li><a href="#images">Images</a><li><a href="#blockquotes">Blockquotes</a><li><a href="#code">Code</a><ul><li><a href="#inline-code">Inline Code</a><li><a href="#code-block">Code Block</a></ul></li><li><a href="#tables">Tables</a><li><a href="#horizontal-rules">Horizontal Rules</a><li><a href="#task-lists">Task Lists</a><li><a href="#including-metadata">Including Metadata</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>

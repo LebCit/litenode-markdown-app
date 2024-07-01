@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Enhancing page presentation control directly from Markdown files with Islands Architecture" />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>Islands | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Islands Architecture</h1>
+
+<p>Islands Architecture is a modern design pattern in web application development that enhances modularity, scalability, and maintainability. It revolves around breaking down a large monolithic application into smaller, self-contained modules or &quot;islands.&quot; Each island typically handles a specific functionality or feature of the application independently.</p>
+<p>By adopting Islands Architecture, developers can achieve several advantages:</p>
+<ol>
+<li><p><strong>Modularity</strong>: Islands are isolated components that can be developed, tested, and deployed independently. This modular approach promotes code reusability and simplifies maintenance.</p>
+</li>
+<li><p><strong>Scalability</strong>: Scaling an application becomes more manageable as islands can be scaled individually based on their specific usage patterns and performance requirements.</p>
+</li>
+<li><p><strong>Flexibility</strong>: Islands can use different technologies, frameworks, or even be hosted on separate servers, providing flexibility in technology choices and deployment strategies.</p>
+</li>
+<li><p><strong>Resilience</strong>: Failure in one island typically doesn’t affect others, enhancing the overall resilience of the application.</p>
+</li>
+<li><p><strong>Team Collaboration</strong>: Islands facilitate parallel development by enabling different teams to work on different parts of the application simultaneously without significant interference.</p>
+</li>
+</ol>
+<p>Overall, Islands Architecture offers a structured approach to building complex web applications, promoting agility, robustness, and ease of management throughout the development lifecycle.</p>
+<p>Haven&#39;t we previously explored and applied this concept by slicing our backend and frontend into reusable components?<br>
+Yes, indeed we have. However, as a bonus, I want to show you how we can take this approach even further!</p>
+<h2 id="individual-styles">Individual Styles</h2>
+
+<p>Let&#39;s explore how we can dynamically apply unique styles to any page directly from its Markdown content!</p>
+<p>Pick any Markdown file and add the following example right after its frontmatter:</p>
+<pre><code class="hljs language-markdown">---
+...
+
+---
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span>
+<span class="hljs-code">    p {
+        color: red;
+    }
+&lt;/style&gt;</span>
+</code></pre><p>This addition empowers us to customize styles directly within the Markdown content, offering unparalleled flexibility and control over each page&#39;s presentation. After saving the modified file, simply access it in your browser, and voilà – magic in action!</p>
+<p>As seemingly insignificant as it may appear, this example illustrates our ability to apply custom styles, scripts, markup, and dynamically load data within any page. It showcases the flexibility and power inherent in customizing the presentation and functionality of each page according to specific needs.</p>
+<h2 id="individual-data">Individual Data</h2>
+
+<p>To integrate individual dynamic data within a page, we&#39;ll use LiteNode&#39;s <a href="https://litenode.pages.dev/docs/markdown/#generate-toc">generateTOC</a> method. This method generates a table of contents based on the heading tags in <code>add-ids-to-headings.md</code>, as an example. Initially, we&#39;ll invoke the method and incorporate the generated HTML string into the data object within <code>pageRoute.js</code>. Subsequently, we&#39;ll render this dynamic content in the markdown file.</p>
+<h3 id="generate-toc">generateToc</h3>
+
+<p>Add the following code in <code>pageRoute.js</code> under <code>const html_content</code> to generate a table of contents (TOC):</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Before:</span>
+<span class="hljs-comment">// Parse the file `content` with Marked</span>
+<span class="hljs-keyword">const</span> html_content = marked.<span class="hljs-title function_">parse</span>(currentMarkdownFile.<span class="hljs-property">content</span>)
+
+<span class="hljs-comment">// After:</span>
+<span class="hljs-comment">// Parse the file `content` with Marked</span>
+<span class="hljs-keyword">const</span> html_content = marked.<span class="hljs-title function_">parse</span>(currentMarkdownFile.<span class="hljs-property">content</span>)
+
+<span class="hljs-comment">// Generate a TOC that will only be used in add-ids-to-headings.md</span>
+<span class="hljs-keyword">const</span> html_toc = app.<span class="hljs-title function_">generateTOC</span>(html_content)
+</code></pre><p>This addition prepares <code>html_toc</code> using <code>app.generateTOC(html_content)</code> specifically for <code>add-ids-to-headings.md</code>, enhancing the functionality by dynamically generating a table of contents from the Markdown content parsed by Marked.</p>
+<h3 id="toc-in-dataobject">TOC in dataObject</h3>
+
+<p>In <code>pageRoute.js</code>, include <code>html_toc</code> in the data object like this:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Before:</span>
+<span class="hljs-comment">// Render currentMarkdownFile with assigned data object</span>
+res.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;layouts/index.html&quot;</span>, { title, description, html_content, titles, <span class="hljs-attr">pageRoute</span>: <span class="hljs-literal">true</span> })
+
+<span class="hljs-comment">// After:</span>
+<span class="hljs-comment">// Render currentMarkdownFile with assigned data object</span>
+res.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;layouts/index.html&quot;</span>, { title, description, html_content, titles, <span class="hljs-attr">pageRoute</span>: <span class="hljs-literal">true</span>, html_toc })
+</code></pre><p>In the updated code, <code>html_toc</code> is added to the data object passed to the <code>res.render</code> function. This allows <code>html_toc</code> to be accessible within the <code>index.html</code> layout template and its children templates, enabling the rendering of the generated table of contents (<code>html_toc</code>) along with other necessary data (<code>title</code>, <code>description</code>, <code>html_content</code>, <code>titles</code>, <code>pageRoute</code>).</p>
+<h3 id="update-file">Update File</h3>
+
+<p>Replace the existing content (excluding the frontmatter) of <code>add-ids-to-headings.md</code> with the following code snippet to demonstrate our example:</p>
+<pre><code class="hljs language-markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span>
+<span class="hljs-code">    .highlighted {
+        background-color: red;
+    }
+&lt;/style&gt;
+</span>
+The <span class="hljs-code">`{{# id}}`</span> syntax allows you to add custom IDs to HTML headings in Markdown.<span class="language-xml"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span></span>
+This is useful for creating anchor links and improving navigation within your documents.
+
+<span class="language-xml"><span class="language-css">&lt;<span class="hljs-selector-tag">table</span>-of-contents&gt;</span></span>
+{{html<span class="hljs-emphasis">_toc}}
+<span class="language-xml"><span class="language-css">&lt;/<span class="hljs-selector-tag">table</span>-of-contents&gt;</span></span>
+
+Example Usage:
+
+# Introduction {#intro}
+
+## Getting Started {#getting-started}
+
+### Installation {#installation}
+
+### Basic Usage {#basic-usage}
+
+## Advanced Topics {#advanced-topics}
+
+### Error Handling {#error-handling}
+
+#### onError {#on-error}
+
+#### notFound {#not-found}
+
+### Middleware {#middleware}
+
+<span class="language-xml"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span></span>
+    document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+        const toc = document.querySelector(&quot;table-of-contents&quot;);
+        const tocLinks = toc.querySelectorAll(&quot;a&quot;);
+        const hash = window.location.hash;
+
+        // Function to highlight the corresponding element
+        const highlightElement = (id) =&gt; {
+            const targetElement = document.getElementById(id);
+            if (targetElement) {
+                targetElement.classList.add(&quot;highlighted&quot;); // Add a CSS class for highlighting
+                setTimeout(() =&gt; {
+                    targetElement.classList.remove(&quot;highlighted&quot;); // Remove the highlight after a delay
+                }, 2000); // Delay of 2 seconds
+            }
+        };
+
+        // Add click event listeners to tocLinks
+        tocLinks.forEach((tocLink) =&gt; {
+            tocLink.addEventListener(&quot;click&quot;, (event) =&gt; {
+                const id = tocLink.getAttribute(&quot;href&quot;).substring(1); // Get the id without the #
+                highlightElement(id); // Call the highlight function
+            });
+        });
+
+        // Highlight the element if the hash exists in the URL
+        if (hash) {
+            const idFromHash = hash.substring(1); // Remove the leading #
+            highlightElement(idFromHash); // Call the highlight function
+        }
+    });
+<span class="language-xml"><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></span></span>
+</code></pre><h4 id="explanation">Explanation</h4>
+
+<ol>
+<li><p><strong>Style Block (<code>&lt;style&gt;</code>)</strong>:</p>
+<ul>
+<li>Defines a CSS rule <code>.highlighted</code> that sets the background color of highlighted elements to red. This is used in conjunction with JavaScript to visually highlight the heading tags.</li>
+</ul>
+</li>
+<li><p><strong>Table of Contents (<code>&lt;table-of-contents&gt;</code>)</strong>:</p>
+<ul>
+<li><code>html_toc</code> is dynamically replaced with generated table of contents (TOC) HTML content, showcasing the hierarchical structure of headings (<code>## Getting Started</code>, etc.).</li>
+</ul>
+</li>
+<li><p><strong>Script Block (<code>&lt;script&gt;</code>)</strong>:</p>
+<ul>
+<li>Implements JavaScript functionality that:<ul>
+<li>Listens for the DOMContentLoaded event.</li>
+<li>Retrieves the table of contents (<code>toc</code>) and its links (<code>tocLinks</code>).</li>
+<li>Handles click events on TOC links to highlight corresponding sections on the page (<code>highlightElement</code> function).</li>
+<li>Automatically highlights the heading corresponding to the current URL hash (<code>window.location.hash</code>), if present.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Although the style and script might not be essential, this example demonstrates the integration of styling (<code>&lt;style&gt;</code>), dynamic content (<code>html_toc</code>), and interactive functionality (<code>&lt;script&gt;</code>) within a Markdown file.</p>
+<p>Given that <code>html_content</code> contains the HTML representation of a Markdown file, when accessing the content of <code>add-ids-to-headings.md</code> in the browser, <code>html_toc</code> is identified within the data object and subsequently parsed to generate its corresponding HTML output.</p>
+<h3 id="restart-server">Restart Server</h3>
+
+<p>Finally, <a href="/tutorial/one-for-all#restart-server">restart your server</a> (<code>pageRoute.js</code> modified), refresh your browser, and click on the <code>Add IDs to Headings</code> link in the menu. You will see the table of contents (TOC) positioned exactly where we placed it within the document. Click on any TOC link, and the corresponding heading will be highlighted!</p>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This example showcasing individual dynamic data highlights the power and flexibility of using Islands Architecture with LiteNode. Now, you have a clear understanding of how you can use LiteNode to push the boundaries of Islands Architecture to new heights.</p>
+<h2 id="next">Next</h2>
+
+<p>Get ready for the final part of this tutorial: generating a static site that can be deployed to any platform hosting static sites Head over to <a href="/tutorial/static-site">Static Site</a> to complete the journey of creating a Markdown-based application in Node.js.</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#individual-styles">Individual Styles</a><li><a href="#individual-data">Individual Data</a><ul><li><a href="#generate-toc">generateToc</a><li><a href="#toc-in-dataobject">TOC in dataObject</a><li><a href="#update-file">Update File</a><ul><li><a href="#explanation">Explanation</a></ul></li><li><a href="#restart-server">Restart Server</a></ul></li><li><a href="#conclusion">Conclusion</a><li><a href="#next">Next</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>

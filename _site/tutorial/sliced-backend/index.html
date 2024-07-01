@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Structuring the backend into modular components for scalability and maintainability" />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>Sliced Backend | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Sliced Backend : The Art of Maintaining a Scalable Architecture</h1>
+
+<h2 id="modular-architecture-foundations">Modular Architecture Foundations</h2>
+
+<p>Creating applications of any size requires disciplined coding practices to ensure long-term viability and ease of maintenance. Modularizing the codebase is crucial for achieving scalability and maintaining a structured architecture that can grow with the application&#39;s demands. By breaking down the application into modular components, each responsible for specific functionalities or features, developers can achieve several benefits:</p>
+<ol>
+<li><p><strong>Scalable Architecture:</strong> Modularization allows the application to scale effectively as requirements evolve. New features can be added or existing ones modified without disrupting the entire codebase. Each module can be independently developed, tested, and deployed, facilitating agile development practices.</p>
+</li>
+<li><p><strong>Ease of Maintenance:</strong> With a modular architecture, maintenance becomes more manageable. Developers can isolate issues to specific modules, making debugging and troubleshooting more efficient. Updates and optimizations can be applied to individual modules without affecting other parts of the application.</p>
+</li>
+<li><p><strong>Code Reusability:</strong> Modular components are inherently reusable. Common functionalities or patterns can be encapsulated into modules that can be easily reused across different parts of the application or even in future projects. This reduces redundancy and promotes consistency in coding practices.</p>
+</li>
+<li><p><strong>Team Collaboration:</strong> Modularization encourages collaboration among team members. Each module can have clear boundaries and interfaces, making it easier for multiple developers to work concurrently on different parts of the application without stepping on each other&#39;s toes.</p>
+</li>
+<li><p><strong>Flexibility and Adaptability:</strong> A well-modularized application is more adaptable to changes in technology, business requirements, or user needs. Modules can be replaced or upgraded independently, allowing the application to stay current and competitive in the long term.</p>
+</li>
+</ol>
+<p>In essence, modularizing an application encourages good coding practices, enhancing development efficiency and ensuring that the application remains maintainable, scalable, and adaptable over its lifecycle. This approach is foundational for building robust, sustainable software solutions that can grow and evolve over time.</p>
+<h2 id="functions-directory">Functions Directory</h2>
+
+<p>To keep your project organized and maintainable, avoid cluttering <code>index.js</code> with all the code. Instead, create a functions directory to house specific task-related functions. Instead, a more structured approach involves creating a <code>functions</code> directory at the root of our application. This directory will house dedicated files containing specific functions tailored to different tasks within the application. This modular setup ensures that functions are logically grouped and can be easily called wherever needed, promoting code reusability and clarity throughout the project.</p>
+<h3 id="markedparseandhighlight-function">markedParseAndHighlight.js</h3>
+
+<p>Create a file named <code>markedParseAndHighlight.js</code> in the <code>functions</code> directory and add the following code:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Marked</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;marked&quot;</span>
+<span class="hljs-keyword">import</span> hljs <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;highlight.js/lib/core&quot;</span>
+<span class="hljs-keyword">import</span> { markedHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;marked-highlight&quot;</span>
+
+<span class="hljs-comment">/**
+ * It is more efficient to import only the library and register the languages we need
+ * 1. List of languages to import and register
+ * 2. Function to register Highlight.js languages asynchronously
+ */</span>
+<span class="hljs-keyword">const</span> languages = [<span class="hljs-string">&quot;bash&quot;</span>, <span class="hljs-string">&quot;javascript&quot;</span>, <span class="hljs-string">&quot;plaintext&quot;</span>] <span class="hljs-comment">// 1</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">registerLanguages</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> lang <span class="hljs-keyword">of</span> languages) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">const</span> <span class="hljs-variable language_">module</span> = <span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">`highlight.js/lib/languages/<span class="hljs-subst">${lang}</span>`</span>)
+            hljs.<span class="hljs-title function_">registerLanguage</span>(lang, <span class="hljs-variable language_">module</span>.<span class="hljs-property">default</span>)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">`Failed to import <span class="hljs-subst">${lang}</span> language module`</span>, error)
+        }
+    }
+} <span class="hljs-comment">// 2</span>
+
+<span class="hljs-comment">// Call the async function to register languages</span>
+<span class="hljs-title function_">registerLanguages</span>()
+
+<span class="hljs-comment">// Configuring marked with markedHighlight and exporting it for reuse where needed</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> markedParseAndHighlight = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Marked</span>(
+    <span class="hljs-title function_">markedHighlight</span>({
+        <span class="hljs-attr">langPrefix</span>: <span class="hljs-string">&quot;hljs language-&quot;</span>,
+        <span class="hljs-title function_">highlight</span>(<span class="hljs-params">code, lang, info</span>) {
+            <span class="hljs-comment">// Check if the language is registered, otherwise default to plaintext</span>
+            <span class="hljs-keyword">const</span> language = hljs.<span class="hljs-title function_">getLanguage</span>(lang) ? lang : <span class="hljs-string">&quot;plaintext&quot;</span>
+
+            <span class="hljs-comment">// Transform code to highlighted HTML</span>
+            <span class="hljs-keyword">return</span> hljs.<span class="hljs-title function_">highlight</span>(code, { language }).<span class="hljs-property">value</span>
+        },
+    })
+)
+</code></pre><p>The <code>export const markedParseAndHighlight</code> statement facilitates the export of a configured <code>Marked</code> instance enhanced with <code>markedHighlight</code>, which optimizes Markdown parsing and enables syntax highlighting. This export enables seamless integration into other modules within the application through imports like:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { markedParseAndHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./functions/markedParseAndHighlight.js&quot;</span>
+</code></pre><p>This approach enhances code modularity by consolidating related functionalities, thereby promoting code reuse across different components of the application.</p>
+<p>In essence, leveraging the <code>export</code> statement in Node.js supports the modular organization of code. By defining functions in separate modules, it enhances clarity and maintenance while facilitating the isolation of specific functionalities. This modular approach contributes to cleaner codebases, improved scalability, and better management of application complexity.</p>
+<h3 id="update-index-js-for-functions">Update index.js</h3>
+
+<p>In <code>index.js</code>, we previously replaced <code>import { marked } from &quot;marked&quot;</code> with a code block. Now, delete the code block entirely and replace it with just:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Importing &#x27;markedParseAndHighlight&#x27; from &quot;./functions/markedParseAndHighlight.js&quot;</span>
+<span class="hljs-keyword">import</span> { markedParseAndHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./functions/markedParseAndHighlight.js&quot;</span>
+
+<span class="hljs-comment">// Assigning &#x27;markedParseAndHighlight&#x27; to the &#x27;marked&#x27; constant</span>
+<span class="hljs-keyword">const</span> marked = markedParseAndHighlight
+</code></pre><p><a href="/tutorial/one-for-all#restart-server">Restart your server</a> and <a href="/tutorial/one-for-all#inspect-files-route">inspect each file route</a>. You&#39;ll notice that <code>markedParseAndHighlight</code>, which we imported, performs correctly.</p>
+<h2 id="routes-directory">Routes Directory</h2>
+
+<p>Although <code>index.js</code> has been streamlined by moving parsing and highlighting logic to a separate module, further improvement can be achieved by organizing each route into its own file, exporting them, and then re-importing them into <code>index.js</code>.</p>
+<p>Let&#39;s create a <code>routes</code> directory at the root of our application and add two files:</p>
+<ol>
+<li><code>entryRoute.js</code>: This module will handle the logic for the entry route.</li>
+<li><code>pageRoute.js</code>: This module will handle the dynamic logic for each individual page.</li>
+</ol>
+<h3 id="entryroute-js">entryRoute.js</h3>
+
+<p>Add the following code to <code>entryRoute.js</code>:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Export entryRoute</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">entryRoute</span> = (<span class="hljs-params">app, marked</span>) =&gt; {
+    app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+        <span class="hljs-comment">// Parse the Markdown file with LiteNode&#x27;s parseMarkdownFile method</span>
+        <span class="hljs-keyword">const</span> parsedIndex = app.<span class="hljs-title function_">parseMarkdownFile</span>(<span class="hljs-string">&quot;index.md&quot;</span>)
+
+        <span class="hljs-comment">// Getting the content out of the parsed file</span>
+        <span class="hljs-keyword">const</span> html_content = marked.<span class="hljs-title function_">parse</span>(parsedIndex.<span class="hljs-property">content</span>)
+
+        <span class="hljs-comment">// Extract title and description from the file frontmatter</span>
+        <span class="hljs-keyword">const</span> { title, description } = parsedIndex.<span class="hljs-property">frontmatter</span>
+
+        <span class="hljs-comment">// Render index.html with assigned data object</span>
+        res.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;layouts/index.html&quot;</span>, { title, description, html_content })
+    })
+}
+</code></pre><h3 id="pageroute-js">pageRoute.js</h3>
+
+<p>Add the following code to <code>pageRoute.js</code>:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Export dynamic route for each Markdown file</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">pageRoute</span> = (<span class="hljs-params">app, marked</span>) =&gt; {
+    app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/page/:href&quot;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-comment">// Parse the Markdown files in the &quot;pages&quot; directory with LiteNode&#x27;s parseMarkdownFileS method</span>
+        <span class="hljs-keyword">const</span> parsedMarkdownFiles = <span class="hljs-keyword">await</span> app.<span class="hljs-title function_">parseMarkdownFileS</span>(<span class="hljs-string">&quot;pages&quot;</span>)
+
+        <span class="hljs-comment">// Find the currentMarkdownFile form parsedMarkdownFiles by its `href` property in its frontmatter</span>
+        <span class="hljs-keyword">const</span> currentMarkdownFile = parsedMarkdownFiles.<span class="hljs-title function_">find</span>(<span class="hljs-function">(<span class="hljs-params">file</span>) =&gt;</span> file.<span class="hljs-property">frontmatter</span>.<span class="hljs-property">href</span> === req.<span class="hljs-property">params</span>.<span class="hljs-property">href</span>)
+
+        <span class="hljs-comment">// Test if such a file exists</span>
+        <span class="hljs-keyword">if</span> (currentMarkdownFile) {
+            <span class="hljs-comment">// If the file exists, extract the needed data from its frontmatter to be transferred</span>
+            <span class="hljs-keyword">const</span> { title, description } = currentMarkdownFile.<span class="hljs-property">frontmatter</span>
+
+            <span class="hljs-comment">// Parse the file `content` with Marked</span>
+            <span class="hljs-keyword">const</span> html_content = marked.<span class="hljs-title function_">parse</span>(currentMarkdownFile.<span class="hljs-property">content</span>)
+
+            <span class="hljs-comment">// Render currentMarkdownFile with assigned data object</span>
+            res.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;layouts/index.html&quot;</span>, { title, description, html_content })
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// If the requested route doesn&#x27;t match a Markdown file&#x27;s href property,</span>
+            <span class="hljs-comment">// send a plain text message to inform the user that it doesn&#x27;t exist.</span>
+            res.<span class="hljs-title function_">status</span>(<span class="hljs-number">404</span>).<span class="hljs-title function_">txt</span>(<span class="hljs-string">&quot;Route Not Found!&quot;</span>)
+        }
+    })
+}
+</code></pre><h3 id="update-index-js-for-routes">Update index.js</h3>
+
+<p>Delete everything in <code>index.js</code> and populate it with the following code:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Import LiteNode and Marked using ES6 import syntax</span>
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">LiteNode</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;litenode&quot;</span>
+
+<span class="hljs-comment">// Importing &#x27;markedParseAndHighlight&#x27; from &quot;./functions/markedParseAndHighlight.js&quot;</span>
+<span class="hljs-keyword">import</span> { markedParseAndHighlight } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./functions/markedParseAndHighlight.js&quot;</span>
+
+<span class="hljs-comment">// Import entryRoute</span>
+<span class="hljs-keyword">import</span> { entryRoute } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./routes/entryRoute.js&quot;</span>
+
+<span class="hljs-comment">// Import pageRoute</span>
+<span class="hljs-keyword">import</span> { pageRoute } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./routes/pageRoute.js&quot;</span>
+
+<span class="hljs-comment">// Create a new instance of LiteNode</span>
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LiteNode</span>()
+
+<span class="hljs-comment">// Assigning &#x27;markedParseAndHighlight&#x27; to the &#x27;marked&#x27; constant</span>
+<span class="hljs-keyword">const</span> marked = markedParseAndHighlight
+
+<span class="hljs-comment">// Create the entry route</span>
+<span class="hljs-title function_">entryRoute</span>(app, marked)
+
+<span class="hljs-comment">// Create dynamic route for each Markdown file</span>
+<span class="hljs-title function_">pageRoute</span>(app, marked)
+
+<span class="hljs-comment">// Start the server</span>
+app.<span class="hljs-title function_">startServer</span>()
+</code></pre><p><a href="/tutorial/one-for-all#restart-server">Restart your server</a> and <a href="/tutorial/one-for-all#inspect-files-route">inspect each file route</a> to verify that everything works as expected.</p>
+<h3 id="explanation">Explanation</h3>
+
+<p>Both functions, <code>entryRoute</code> and <code>pageRoute</code>, are defined with two parameters: <code>app</code> and <code>marked</code>. Parameters act as placeholders that receive values when the functions are called, enabling them to receive essential data or information required for their operations. These parameters behave like variables within the functions&#39; scope, being initialized with specific values each time the functions are invoked.</p>
+<p>In our <code>index.js</code> file, when calling <code>entryRoute</code> and <code>pageRoute</code>, we pass actual values (arguments) that correspond to each parameter positionally. Specifically:</p>
+<ul>
+<li><code>app</code> represents the LiteNode instance created using <code>new LiteNode()</code>.</li>
+<li><code>marked</code> refers to the constant <code>marked</code>, which is assigned the value of <code>markedParseAndHighlight</code> from our imported module.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Now, index.js includes only the essential code, thanks to our modular approach. This improvement is achieved by organizing and modularizing the previous code into separate, reusable modules as needed.</p>
+<h2 id="next">Next</h2>
+
+<p>Now that we&#39;ve reviewed the backend structure of our application, the next part of this chapter focuses on controlling template rendering based on conditions. You might have observed that we are currently loading the highlighting stylesheet <code>a11y-dark.min.css</code> on both the entry route and each page route. However, it&#39;s actually only necessary on routes serving Markdown files from the <code>pages</code> directory, where code blocks may be present. We&#39;ll tackle this issue in the next section: <a href="/tutorial/conditionals">Conditionals</a>. Stay tuned!</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#modular-architecture-foundations">Modular Architecture Foundations</a><li><a href="#functions-directory">Functions Directory</a><ul><li><a href="#markedparseandhighlight-function">markedParseAndHighlight.js</a><li><a href="#update-index-js-for-functions">Update index.js</a></ul></li><li><a href="#routes-directory">Routes Directory</a><ul><li><a href="#entryroute-js">entryRoute.js</a><li><a href="#pageroute-js">pageRoute.js</a><li><a href="#update-index-js-for-routes">Update index.js</a><li><a href="#explanation">Explanation</a></ul></li><li><a href="#conclusion">Conclusion</a><li><a href="#next">Next</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Dynamically load description from transferred data object -->
+	<meta name="description" content="Detailed process for parsing and rendering a Markdown file." />
+
+	<link rel="shortcut icon" href="/static/images/litenode-dark-transparent-logo.ico" type="image/x-icon" />
+
+	<!-- Dynamically load title from transferred data object -->
+	<title>First File | LiteNode MAT</title>
+
+	<!-- Global Styles -->
+	<link rel="stylesheet" href="/static/css/global-styles.css" />
+	<link rel="stylesheet" href="/static/css/responsive-attributes-min.css" />
+
+	
+	<link rel="stylesheet" href="/static/css/tutorial.css" />
+	<link rel="stylesheet" href="/static/css/a11y-dark.min.css" />
+	
+</head>
+
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		<header data-sm="2column">
+	<header-left>
+		<a data-sm="column" href="/">
+			<img
+				data-sm="middle"
+				src="/static/images/litenode-dark-transparent-logo.avif"
+				alt="LiteNode dark transparent logo"
+			/>
+		</a>
+	</header-left>
+
+	<header-right data-sm="2column gap right middle">
+		<a data-sm="middle " href="/tutorial/installation">Tutorial</a>
+
+		<a data-sm="column right" href="https://github.com/LebCit/litenode-markdown-app">
+			<img data-sm="middle right" src="/static/images/github-logo.png" alt="GitHub logo" />
+		</a>
+	</header-right>
+</header>
+
+
+		<!-- Check if we are on the homepage -->
+		<!-- Load the main section of the tutorial -->
+		<!-- Main section for tutorial -->
+<main data-sm="column">
+	<mobile-menu-trigger data-sm="pad" data-lg="hide">
+		<button><span>☰ Docs Menu</span></button>
+		<span>▶ Installation</span>
+	</mobile-menu-trigger>
+
+	<main-menu-sidebar data-sm="column">
+		<main-menu-header data-sm="2column pad" data-lg="hide">
+			<h2 data-sm="left">Documentation</h2>
+			<button data-sm="right"><span>✖</span></button>
+		</main-menu-header>
+
+		<main-menu-nav data-sm="pad" data-lg="noPad">
+			<span id="mainMenu" hidden>[{&quot;key&quot;:&quot;Starting&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Installation&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;installation&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;Process&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;process&quot;},{&quot;metadata.category&quot;:&quot;Starting&quot;,&quot;metadata.catIndex&quot;:1,&quot;metadata.subcategory&quot;:&quot;First File&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;first-file&quot;}]},{&quot;key&quot;:&quot;Structuring&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Templating&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;templating&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;One For All&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;one-for-all&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Highlight Code&quot;,&quot;metadata.subCatIndex&quot;:3,&quot;href&quot;:&quot;highlight-code&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Sliced Backend&quot;,&quot;metadata.subCatIndex&quot;:4,&quot;href&quot;:&quot;sliced-backend&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Conditionals&quot;,&quot;metadata.subCatIndex&quot;:5,&quot;href&quot;:&quot;conditionals&quot;},{&quot;metadata.category&quot;:&quot;Structuring&quot;,&quot;metadata.catIndex&quot;:2,&quot;metadata.subcategory&quot;:&quot;Loops&quot;,&quot;metadata.subCatIndex&quot;:6,&quot;href&quot;:&quot;loops&quot;}]},{&quot;key&quot;:&quot;Styling&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;CSS From HTML&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;html-attributes&quot;},{&quot;metadata.category&quot;:&quot;Styling&quot;,&quot;metadata.catIndex&quot;:3,&quot;metadata.subcategory&quot;:&quot;Islands&quot;,&quot;metadata.subCatIndex&quot;:2,&quot;href&quot;:&quot;islands&quot;}]},{&quot;key&quot;:&quot;Go Static!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Go Static!&quot;,&quot;metadata.catIndex&quot;:4,&quot;metadata.subcategory&quot;:&quot;Static Site&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;static-site&quot;}]},{&quot;key&quot;:&quot;Bonus!&quot;,&quot;value&quot;:[{&quot;metadata.category&quot;:&quot;Bonus!&quot;,&quot;metadata.catIndex&quot;:5,&quot;metadata.subcategory&quot;:&quot;MD Cheat Sheet&quot;,&quot;metadata.subCatIndex&quot;:1,&quot;href&quot;:&quot;markdown-cheat-sheet&quot;}]}]</span>
+			
+			<details open>
+				<summary>Starting</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/installation">Installation</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/process">Process</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/first-file">First File</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Structuring</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/templating">Templating</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/one-for-all">One For All</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/highlight-code">Highlight Code</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/sliced-backend">Sliced Backend</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/conditionals">Conditionals</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/loops">Loops</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Styling</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/html-attributes">CSS From HTML</a>
+						</li>
+						
+						<li>
+							<a href="/tutorial/islands">Islands</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Go Static!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/static-site">Static Site</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+			<details open>
+				<summary>Bonus!</summary>
+				<sub-categories>
+					<ul>
+						
+						<li>
+							<a href="/tutorial/markdown-cheat-sheet">MD Cheat Sheet</a>
+						</li>
+						
+					</ul>
+				</sub-categories>
+			</details>
+			
+		</main-menu-nav>
+	</main-menu-sidebar>
+
+	<main-content data-lg="pad"><h1>Rendering our first Markdown file</h1>
+
+<p>Keep in mind that if our application didn&#39;t require highlighting code blocks, we would only need to install <code>LiteNode</code> and <code>Marked</code> as mentioned earlier in <a href="/tutorial/installation#our-dependencies">Our Dependencies</a>.</p>
+<h2 id="why-markdown">Why Markdown?</h2>
+
+<p>Why do we use Markdown in the first place, if it eventually renders an HTML file? Simply put, Markdown is plain text! Instead of crafting intricate HTML structures, we opt for a plaintext markup language that automates this process for us.</p>
+<p>Markdown offers several advantages over HTML for creating and formatting text content:</p>
+<ol>
+<li><strong>Simplicity</strong>: Markdown syntax is straightforward and easy to learn compared to HTML. It uses simple characters like <code>#</code> for headers, <code>*</code> or <code>_</code> for emphasis, and <code>-</code> or <code>*</code> for lists, which makes writing and formatting text quicker.</li>
+<li><strong>Readability</strong>: Markdown files are inherently more readable than HTML. The syntax is closer to plain text, so even without rendering, the structure of the document is clear.</li>
+<li><strong>Ease of Use</strong>: Writing Markdown is faster because you don&#39;t need to write verbose HTML tags. For example, <code># Header 1</code> in Markdown vs. <code>&lt;h1&gt;Header 1&lt;/h1&gt;</code> in HTML.</li>
+<li><strong>Portability</strong>: Markdown files are plain text files, which means they can be opened and edited in any text editor. They are also platform-independent and can be easily version-controlled with tools like <a href="https://git-scm.com/">Git</a>.</li>
+<li><strong>Focus on Content</strong>: Markdown allows writers to focus more on the content itself rather than worrying about formatting details. This can be particularly useful for note-taking, documentation, and writing articles.</li>
+<li><strong>Widely Supported</strong>: Markdown is supported by many platforms, tools, and content management systems (CMS). This makes it a versatile choice for writing content that needs to be shared or published online.</li>
+<li><strong>HTML Integration</strong>: While Markdown is simpler for basic formatting, it also allows for HTML integration. If needed, you can embed HTML directly within Markdown, giving you flexibility without losing the simplicity of Markdown syntax.</li>
+</ol>
+<p>In summary, Markdown excels in simplicity, readability, and ease of use, making it a preferred choice for creating and formatting text content compared to HTML, especially for tasks that prioritize content creation and readability over complex layout and design.</p>
+<h2 id="markdown-file">Markdown File</h2>
+
+<p>In a Markdown file, the structure typically consists of two main sections: the frontmatter and the content.</p>
+<ol>
+<li><p><strong>Frontmatter</strong>: The frontmatter is a section enclosed between delimiters (<code>---</code> or <code>+++</code>). It serves as a metadata container for the document, containing information such as title, date, author, tags, and any other relevant data.</p>
+<p> Example:</p>
+<pre><code class="hljs language-yaml">---
+title: My Markdown Document
+date: 2024-06-24
+author: John Doe
+tags:
+    - markdown
+    - YAML
+---
+</code></pre><p> The frontmatter provides context and supplementary information about the content that follows.</p>
+</li>
+<li><p><strong>Content</strong>: The actual content of the Markdown file begins immediately after the frontmatter. This section contains plaintext that includes Markdown markup for formatting purposes. Markdown allows you to structure text with headers, lists, emphasis (bold or italic), links, images, and more using simple and intuitive syntax.</p>
+<p> Example:</p>
+<pre><code class="hljs language-markdown"><span class="hljs-section"># Introduction</span>
+
+This is a paragraph of text with <span class="hljs-strong">**emphasis**</span> and a [<span class="hljs-string">link</span>](<span class="hljs-link">https://example.com</span>).
+
+<span class="hljs-section">## Subsection</span>
+
+<span class="hljs-bullet">-</span>   List item 1
+<span class="hljs-bullet">-</span>   List item 2
+
+![<span class="hljs-string">Image</span>](<span class="hljs-link">image.jpg</span>)
+</code></pre><p> Additionally, Markdown files can include HTML for more complex layout requirements or styling that Markdown syntax doesn&#39;t directly support.</p>
+</li>
+<li><p><strong>Parsing to HTML</strong>: When a Markdown file is rendered for deployment on a website or application, it undergoes a process where Markdown syntax and embedded HTML are parsed and converted into HTML code. This transformation is typically handled by Markdown parsers or converters, which interpret the Markdown and HTML tags to generate the corresponding HTML output.</p>
+<p> For example, the Markdown content above might be parsed into HTML like this:</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    This is a paragraph of text with
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>emphasis<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    and a
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://example.com&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    .
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Subsection<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Image&quot;</span> /&gt;</span>
+</code></pre></li>
+<li><p><strong>Deployment/Usage</strong>: The resulting HTML output is what is deployed or used on websites or web applications. HTML is the standard markup language understood by web browsers, ensuring that the content appears correctly formatted and styled for users accessing the site.</p>
+</li>
+</ol>
+<p>In summary, Markdown files combine structured metadata in the frontmatter with plaintext content using Markdown syntax (and optionally HTML) to create documents that are both human-readable and machine-processable. This content is ultimately parsed into HTML for display on websites, ensuring compatibility and proper rendering across different platforms and devices.</p>
+<h2 id="litenode-frontmatter">LiteNode's Frontmatter</h2>
+
+<p>In LiteNode, the frontmatter is delimited by a pair of 3 hyphens <code>---</code>. Think of the frontmatter as a concise database that encapsulates essential metadata about the document. The frontmatter is written in <a href="https://yaml.org/">YAML</a> (YAML Ain&#39;t Markup Language). YAML is a human-readable data serialization standard that is concise and easy to understand. Here are some advantages of using YAML for Markdown file frontmatter:</p>
+<ol>
+<li><strong>Structured Data</strong>: YAML provides a structured way to define metadata such as title, author, date, tags, and other attributes relevant to the document. This structured format makes it easier for both humans and machines to parse and understand the information.</li>
+<li><strong>Readability</strong>: YAML&#39;s syntax is designed to be clear and visually appealing. It uses indentation to denote hierarchical structure, which enhances readability compared to other formats like <a href="https://www.json.org/json-en.html">JSON</a> or <a href="https://en.wikipedia.org/wiki/XML">XML</a>.</li>
+<li><strong>Ease of Use</strong>: Writing YAML is straightforward and requires minimal syntax. This simplicity reduces the cognitive load when adding or modifying metadata in the frontmatter, especially for users who may not be familiar with more complex markup or programming languages.</li>
+<li><strong>Integration</strong>: YAML is widely supported across various platforms, tools, and programming languages. It&#39;s interoperable with many systems and frameworks used for content management, version control, and static site generators.</li>
+<li><strong>Flexibility</strong>: YAML allows for a wide range of data types and structures, including lists (arrays), dictionaries (objects), and scalar values (strings, numbers, or booleans). This flexibility accommodates diverse metadata needs without imposing rigid formatting requirements.</li>
+<li><strong>Maintainability</strong>: By separating metadata from the main content of the Markdown file, YAML frontmatter promotes clean, maintainable document organization. This separation helps in easily updating or modifying metadata without affecting the core text content.</li>
+</ol>
+<p>In summary, YAML provides a structured, readable, and versatile format for defining frontmatter in Markdown files. It enhances the clarity, ease of use, and interoperability of metadata management, making it a preferred choice for many content creators and developers.</p>
+<h2 id="our-first-file">Our First File</h2>
+
+<h3 id="views">views</h3>
+
+<p>In LiteNode, it is mandatory that Markdown files (<code>example.md</code>), along with HTML template files (<code>example.html</code>), are located specifically within the <code>views</code> directory or any of its sub-folders. This organizational requirement ensures that all view-related content, including Markdown files for content creation and HTML templates for structured layouts, is centralized and easily accessible within the project structure. This practice promotes clarity, consistency, and efficient management of view-related resources throughout LiteNode applications.</p>
+<p>Begin by creating a directory named <code>views</code> at the root level of our application. This directory will house all the Markdown and HTML template files.</p>
+<h3 id="markdown-index">index.md</h3>
+
+<p>Inside the <code>views</code> directory, create a Markdown file named <code>index.md</code>. Copy and paste the following into the file:</p>
+<pre><code class="hljs language-markdown">---
+title: Home
+description: &quot;A comprehensive tutorial on creating a Markdown-based application using LiteNode in Node.js.&quot;
+tags: [&quot;Node.js&quot;, Markdown, Tutorial]
+metadata:
+<span class="hljs-code">    category: Tutorial
+    difficulty: Beginner
+---
+</span>
+<span class="hljs-section"># Introduction {#Introduction}</span>
+
+Welcome to the homepage of this tutorial!
+Whether you are a developer or a total coding beginner,
+you&#x27;ll find that LiteNode&#x27;s simplicity allows anyone
+to create applications using Markdown (or not) with ease.
+
+<span class="hljs-section">## Requirements {#Requirements}</span>
+
+All you need for this tutorial is to download and install Node.js on your machine.
+The easiest way to do this is by downloading
+the [<span class="hljs-string">Prebuilt Installer</span>](<span class="hljs-link">https://nodejs.org/en/download/prebuilt-installer</span>)
+that matches your machine&#x27;s specifications.
+</code></pre><alert data-sm="2column pad gap">
+    <alert-icon data-sm="middle">
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.44.0/icons/info-hexagon.svg" alt="Information SVG" />
+</alert-icon>
+<alert-text data-sm="middle">
+
+<p>To create a collection of items (array) in LiteNode's frontmatter, use the square brackets <code>[...]</code>.</p>
+<p>To create a dictionary of key-value pairs items (object) in LiteNode's frontmatter, use a nested structure like <code>metadata</code> in the given file.</p>
+<p>A string containing <a href="https://www.webopedia.com/definitions/special-character/#How_to_Type_Special_Characters" >special characters</a> <strong>must</strong> be double quoted <code>"Node.js"</code>.</p>
+</alert-text>
+</alert>
+
+<h2 id="entry-file">Entry File</h2>
+
+<h3 id="main-entry">main entry</h3>
+
+<p>As previously discussed in <a href="http://localhost:5000/tutorial/installation#initialization">Initialization</a>, the <code>package.json</code> file serves as a crucial configuration hub for our project. It outlines various settings, including specifying the main file:</p>
+<pre><code class="hljs language-json"><span class="hljs-attr">&quot;main&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;index.js&quot;</span>
+</code></pre><p>This <code>main</code> entry designates <code>index.js</code> as the primary file in our project structure. Often referred to as the entry file, <code>index.js</code> acts as the starting point for a Node.js application. It typically initializes the application, sets up server configurations, defines routes, and orchestrates the overall application logic.</p>
+<h3 id="module-type">module type</h3>
+
+<p>In addition to defining the main entry point, if we intend to utilize <a href="https://javascript.info/modules-intro">ES6 modules</a> in our Node.js application, we must add a <code>&quot;type&quot;</code> setting to our <code>package.json</code>:</p>
+<pre><code class="hljs language-json"><span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;module&quot;</span>
+</code></pre><p>This <code>&quot;type&quot;: &quot;module&quot;</code> declaration informs Node.js that our application will be using ES6 module syntax for JavaScript files. ES6 modules provide several benefits over CommonJS, including improved code organization, clearer syntax with <code>import</code> and <code>export</code> statements, and support for static analysis and tree-shaking in modern JavaScript tooling.</p>
+<p>By specifying <code>&quot;type&quot;: &quot;module&quot;</code>, Node.js will interpret our JavaScript files as ES6 modules by default. This setting is crucial for leveraging the full power of modern JavaScript features and ensuring compatibility with newer libraries and frameworks that rely on ES6 module syntax.</p>
+<h3 id="update">Update</h3>
+
+<p>Since we are adopting ES6 modules, we need to include the <code>&quot;type&quot;: &quot;module&quot;</code> declaration directly below <code>&quot;main&quot;: &quot;index.js&quot;</code> in our <code>package.json</code> file. This configuration informs Node.js that our application will utilize ES6 module syntax for JavaScript files. Updated, our <code>package.json</code> file now appears as follows:</p>
+<pre><code class="hljs language-json">...
+<span class="hljs-attr">&quot;main&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;index.js&quot;</span><span class="hljs-punctuation">,</span>
+<span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;module&quot;</span><span class="hljs-punctuation">,</span>
+...
+</code></pre><h3 id="index-js">index.js</h3>
+
+<p>Create an <code>index.js</code> file at the root of our application and populate it with the following code:</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Import LiteNode and Marked using ES6 import syntax</span>
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">LiteNode</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;litenode&quot;</span>
+<span class="hljs-keyword">import</span> { marked } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;marked&quot;</span>
+
+<span class="hljs-comment">// Create a new instance of LiteNode</span>
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LiteNode</span>()
+
+<span class="hljs-comment">// Create the entry route</span>
+app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+    <span class="hljs-comment">// Parse the Markdown file with LiteNode&#x27;s parseMarkdownFile method</span>
+    <span class="hljs-keyword">const</span> parsedIndex = app.<span class="hljs-title function_">parseMarkdownFile</span>(<span class="hljs-string">&quot;index.md&quot;</span>)
+
+    <span class="hljs-comment">// Getting the content out of the parsed file</span>
+    <span class="hljs-keyword">const</span> html_content = marked.<span class="hljs-title function_">parse</span>(parsedIndex.<span class="hljs-property">content</span>)
+
+    <span class="hljs-comment">// Extract title and description from the file frontmatter</span>
+    <span class="hljs-keyword">const</span> { title, description } = parsedIndex.<span class="hljs-property">frontmatter</span>
+
+    <span class="hljs-comment">// Render index.html with assigned data object</span>
+    res.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;layouts/index.html&quot;</span>, { title, description, html_content })
+})
+
+<span class="hljs-comment">// Start the server</span>
+app.<span class="hljs-title function_">startServer</span>()
+</code></pre><h3 id="index-js-explanation">Explanation</h3>
+
+<ol>
+<li><p><strong>Imports using ES6 Syntax</strong>:</p>
+<ul>
+<li><code>import { LiteNode } from &quot;litenode&quot;</code>: Imports <code>LiteNode</code> from the <code>litenode</code> package. This assumes <code>LiteNode</code> is exported as a named export from the package.</li>
+<li><code>import { marked } from &quot;marked&quot;</code>: This syntax imports the named export <code>marked</code> from the <code>marked</code> module.</li>
+</ul>
+</li>
+<li><p><strong>LiteNode Instance</strong>:</p>
+<ul>
+<li><code>const app = new LiteNode()</code>: Creates a new instance of <code>LiteNode</code>, initializing the LiteNode application.</li>
+</ul>
+</li>
+<li><p><strong>Routing and Markdown Parsing</strong>:</p>
+<ul>
+<li><code>app.get(&quot;/&quot;, (req, res) =&gt; { ... })</code>: Defines a route handler for the root (<code>&quot;/&quot;</code>) path. When a request is made to the root path, this handler executes.</li>
+<li><code>const parsedIndex = app.parseMarkdownFile(&quot;index.md&quot;)</code>: Uses LiteNode&#39;s <code>parseMarkdownFile</code> method to parse the Markdown file named <code>index.md</code>. This method returns an object (<code>parsedIndex</code>) containing <code>content</code> (Markdown content) and <code>frontmatter</code> (metadata from the Markdown frontmatter).</li>
+</ul>
+</li>
+<li><p><strong>Markdown to HTML Conversion</strong>:</p>
+<ul>
+<li><code>const html_content = marked(parsedIndex.content)</code>: Uses <code>marked</code> to convert the parsed Markdown content (<code>parsedIndex.content</code>) into HTML.</li>
+</ul>
+</li>
+<li><p><strong>Frontmatter Extraction</strong>:</p>
+<ul>
+<li><code>const { title, description } = parsedIndex.frontmatter</code>: Destructure <code>title</code> and <code>description</code> from <code>parsedIndex.frontmatter</code>, extracting metadata defined in the Markdown file&#39;s frontmatter.</li>
+</ul>
+</li>
+<li><p><strong>Rendering</strong>:</p>
+<ul>
+<li><code>res.render(&quot;layouts/index.html&quot;, { title, description, html_content })</code>: Sends a response (<code>res</code>) by rendering the <code>index.html</code> template located in the <code>layouts</code> directory under <code>views</code>. It passes an object (<code>{ title, description, html_content }</code>) as data to be rendered within the HTML template.</li>
+</ul>
+</li>
+<li><p><strong>Server Start</strong>:</p>
+<ul>
+<li><code>app.startServer()</code>: Starts the LiteNode server, making the application ready to handle incoming requests.</li>
+</ul>
+</li>
+</ol>
+<p>This code snippet demonstrates a basic setup using LiteNode, Markdown parsing, HTML rendering, and server initialization, showcasing how to integrate Markdown content into a web application using modern JavaScript (ES6) syntax.</p>
+<h2 id="main-template">Main Template</h2>
+
+<p>As previously explained, the <code>index.html</code> template resides in the <code>layouts</code> directory within <code>views</code>. Create a <code>layouts</code> folder inside the <code>views</code> directory. Within <code>layouts</code>, create an <code>index.html</code> file and populate it with the following code:</p>
+<pre><code class="hljs language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+        <span class="hljs-comment">&lt;!-- Dynamically load description from transferred data object --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;{{description}}&quot;</span> /&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Dynamically load title from transferred data object --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>{{title}} | LiteNode MAT<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Inject raw html content from transferred data object --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>{{html_content}}<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre><alert data-sm="2column pad gap">
+    <alert-icon data-sm="middle">
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.44.0/icons/info-hexagon.svg" alt="Information SVG" />
+    </alert-icon>
+    <alert-text data-sm="middle">
+        <p>In LiteNode, when directly <a href="https://litenode.pages.dev/docs/rendering-templates/#injecting-raw-html-content">injecting raw HTML content into a template</a>, ensure to use the <code>html_</code> property as required.</p>
+    </alert-text>
+</alert>
+
+<h2 id="structure">Structure</h2>
+
+<p>The directory structure of our LiteNode Markdown application is outlined below:</p>
+<pre><code class="hljs language-txt">📂litenode-markdown-app (root directory)
+  ├── 📄index.js (entry file)
+  ├── 📄package.json (application settings file)
+  └── 📂views (views directory)
+      ├── 📄index.md (first Markdown file)
+      └── 📂layouts (layouts directory)
+          └── 📄index.html (main template file)
+</code></pre><h3 id="tree-explanation">Explanation</h3>
+
+<ul>
+<li><strong><code>index.js</code></strong>: This file serves as the entry point for our LiteNode application. It initializes the server, defines routes, and integrates various functionalities.</li>
+<li><strong><code>package.json</code></strong>: The <code>package.json</code> file contains configuration settings for our application, including dependencies, scripts, and metadata like project name and version.</li>
+<li><strong><code>views/</code></strong>: This directory houses all view-related files for our application. It includes Markdown files (<code>index.md</code> in this case) that contain content to be rendered dynamically.</li>
+<li><strong><code>views/layouts/</code></strong>: Within the <code>views</code> directory, <code>layouts</code> is a subdirectory that stores HTML templates used for structuring the appearance of rendered content. The <code>index.html</code> file here serves as the main template for our application.</li>
+</ul>
+<h3 id="notes">Notes</h3>
+
+<ul>
+<li>Ensure the <code>index.md</code> file within <code>views/</code> contains Markdown content formatted with text and metadata (frontmatter).</li>
+<li>The <code>index.html</code> file in <code>views/layouts/</code> provides the structure and layout for rendering content dynamically generated from the Markdown file.</li>
+</ul>
+<p>This directory structure ensures a well-organized approach to developing and managing a LiteNode application that integrates Markdown-based content rendering seamlessly with HTML templates.</p>
+<h2 id="rendering">Rendering</h2>
+
+<p>To view the content of our first Markdown file, follow these steps:</p>
+<ol>
+<li><p><strong>Launch the Application</strong>: Start your LiteNode application by executing the following command in your terminal:</p>
+<pre><code class="hljs language-bash">node index
+</code></pre><p> This command runs the <code>index.js</code> file, which is the entry point of your LiteNode application.</p>
+</li>
+<li><p><strong>Terminal Output</strong>: Upon executing <code>node index</code>, you may see the following message in your terminal:</p>
+<pre><code class="hljs language-txt">Error while reading static directory: &quot;static&quot; directory doesn&#x27;t exist!
+LiteNode will continue running without serving static assets.
+App @ http://localhost:5000
+</code></pre><p> This message indicates that LiteNode encountered an error while attempting to locate a directory named &quot;static&quot; for <a href="https://litenode.pages.dev/docs/serving-static-files/">serving static assets</a> (such as styles, scripts, and images). LiteNode will continue running without this feature.</p>
+</li>
+<li><p><strong>Access the Application</strong>: Despite the warning message, you can proceed to access your LiteNode application by clicking on the provided link or typing <code>http://localhost:5000</code> into your web browser&#39;s address bar.</p>
+<ul>
+<li><strong>Example</strong>: If LiteNode is running on the default port (<code>5000</code>), accessing <code>http://localhost:5000</code> in your browser will display the HTML content generated from <code>index.md</code>.</li>
+</ul>
+</li>
+<li><p><strong>Ignore the Warning</strong>: The warning about the &quot;static&quot; directory can be ignored if your application doesn&#39;t require serving static assets at this moment. LiteNode will function normally for rendering Markdown content and handling dynamic routes as configured in your <code>index.js</code> file.</p>
+</li>
+</ol>
+<p>By following these steps, you can easily launch and access your LiteNode application to view the rendered HTML content generated from your Markdown files, demonstrating the seamless integration and functionality provided by LiteNode.</p>
+<h2 id="next">Next</h2>
+
+<p>Now that we have a thorough understanding of how LiteNode processes and renders Markdown files to the browser, we&#39;re ready to explore more advanced topics in the next chapter. Specifically, we will delve into rendering <a href="https://litenode.pages.dev/docs/markdown/#parse-markdown-files">multiple Markdown files</a> and leveraging LiteNode&#39;s <a href="https://litenode.pages.dev/docs/rendering-templates/">Simple Template Engine (STE)</a> to organize and structure their presentation. Explore <a href="/tutorial/templating">Templating</a> to learn how to create dynamic, reusable HTML components, improve code modularity, and streamline data injection for a more maintainable and consistent web application.</p>
+</main-content>
+
+	<toc-sidebar data-sm="hide" data-lg="show">
+		
+		<toc-nav>
+			<h2>Content</h2>
+			<ul><li><a href="#why-markdown">Why Markdown?</a><li><a href="#markdown-file">Markdown File</a><li><a href="#litenode-frontmatter">LiteNode's Frontmatter</a><li><a href="#our-first-file">Our First File</a><ul><li><a href="#views">views</a><li><a href="#markdown-index">index.md</a></ul></li><li><a href="#entry-file">Entry File</a><ul><li><a href="#main-entry">main entry</a><li><a href="#module-type">module type</a><li><a href="#update">Update</a><li><a href="#index-js">index.js</a><li><a href="#index-js-explanation">Explanation</a></ul></li><li><a href="#main-template">Main Template</a><li><a href="#structure">Structure</a><ul><li><a href="#tree-explanation">Explanation</a><li><a href="#notes">Notes</a></ul></li><li><a href="#rendering">Rendering</a><li><a href="#next">Next</a></ul>
+		</toc-nav>
+		
+	</toc-sidebar>
+</main>
+
+		<!-- End and close checking logic -->
+
+		<!-- Include footer.html -->
+		<footer data-sm="column gap" data-lg="3column noGap">
+	<footer-copyright data-sm="2column gap center" data-lg="left">
+		<litenode-logo>
+			<img src="/static/images/litenode-dark-transparent-logo.avif" alt="LiteNode dark transparent logo" />
+		</litenode-logo>
+
+		<p>
+			Built with ❤️ by
+			<a href="https://lebcit.github.io/">LebCit</a>
+			<br />
+			Code licensed MIT
+		</p>
+	</footer-copyright>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-credits data-sm="center">
+		<p>
+			Tutorial proudly created with:
+			<credits-links data-sm="column">
+				<a href="https://www.npmjs.com/package/litenode" data-sm="left">LiteNode</a>
+
+				<a href="https://responsive-attributes-generator.pages.dev/" data-sm="left">Responsive Attributes</a>
+
+				<a href="https://www.colorsandfonts.com/atlassian-color-system/" data-sm="left">
+					Atlassian Color System
+				</a>
+			</credits-links>
+		</p>
+	</footer-credits>
+
+	<hr data-sm="center" data-lg="hide" />
+
+	<footer-about data-sm="center" data-lg="right">
+		<p>
+			Autodidactic Web Developer.
+			<br />
+			Love to Read, Learn &amp; DIMySelf!
+		</p>
+
+		<a href="https://lebcit.github.io/pages/about/">Short story of my dev journey</a>
+	</footer-about>
+</footer>
+
+
+		<!-- Load needed script depending on actual route -->
+		
+		<script type="module" src="/static/js/tutorial.js"></script>
+		
+	</body>
+</html>
