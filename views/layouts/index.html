@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Include head.html -->
+	{{include("components/head.html")}}
+
+	<body data-sm="column gap childPad">
+		<!-- Include header.html -->
+		{{include("components/header.html")}}
+
+		<!-- Check if we are on the homepage -->
+		{{#if entryRoute}}
+		<!-- If so load the main section of the homepage -->
+		{{include("components/main-homepage.html")}}
+		<!-- If we are on the notFoundRoute -->
+		{{#elseif notFoundRoute}}
+		<!-- Load the main section of not found -->
+		{{include("components/main-not-found.html")}}
+		<!-- Otherwise we are in the tutorial -->
+		{{#else}}
+		<!-- Load the main section of the tutorial -->
+		{{include("components/main-tutorial.html")}}
+		<!-- End and close checking logic -->
+		{{/if}}
+
+		<!-- Include footer.html -->
+		{{include("components/footer.html")}}
+
+		<!-- Load needed script depending on actual route -->
+		{{#if entryRoute}}
+		<!-- Script to add target and rel attributes to external links -->
+		<script type="module">
+			import { updateExternalLinks } from "/static/js/updateExternalLinks.js"
+
+			document.addEventListener("DOMContentLoaded", () => {
+				// Add target and rel attributes to external links
+				updateExternalLinks()
+			})
+		</script>
+		{{#elseif tutorialRoute}}
+		<script type="module" src="/static/js/tutorial.js"></script>
+		{{/if}}
+	</body>
+</html>
