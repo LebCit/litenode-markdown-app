@@ -310,6 +310,63 @@ Running this command executes the `build.js` script, generating your static site
 -   It parses markdown files, sorts them, and generates HTML files using templates.
 -   It handles the main index route and individual page routes, creating necessary directories and copying static assets.
 
+## Final Structure {#Final Structure}
+
+Here is the finalized tree structure of our application **after** generating a static site using the `npm run build` command:
+
+```txt
+📂 litenode-markdown-app (root directory)
+  ├── 📂 _site (Generated static site directory)
+  │   ├── 📄 index.html (Static site entry file)
+  │   ├── 📂 page (Static site's page directory)
+  │   │   ├── 📂 add-ids-to-headings
+  │   │   │   └── 📄 index.html (add-ids-to-headings page)
+  │   │   ├── 📂 basic-usage
+  │   │   │   └── 📄 index.html (basic-usage page)
+  │   │   ├── 📂 error-handling
+  │   │   │   └── 📄 index.html (error-handling page)
+  │   │   ├── 📂 installation
+  │   │   │   └── 📄 index.html (installation page)
+  │   │   └── 📂 middleware
+  │   │       └── 📄 index.html (middleware page)
+  │   └── 📂 static (Static site's assets directory)
+  │       ├── 📂 css (Static site's styles directory)
+  │       │   ├── 📄 a11y-dark.min.css (Static site's highlighting stylesheet)
+  │       │   └── 📄 responsive-attributes.css (Static site'sCSS Grid stylesheet)
+  │       ├── 📂 images (Static site's images directory)
+  │       └── 📂 js (Static site's scripts directory)
+  ├── 📂 functions (App's functions directory)
+  │   ├── 📄 build.js (App's build function)
+  │   └── 📄 markedParseAndHighlight.js (App's parse and highlight function)
+  ├── 📄 index.js (App's entry file)
+  ├── 📄 package-lock.json (App's auto-generated file)
+  ├── 📄 package.json (App's settings file)
+  ├── 📂 routes (App's routes directory)
+  │   ├── 📄 entryRoute.js (App's entry route)
+  │   └── 📄 pageRoute.js (App's page route)
+  ├── 📂 static (App's static assets directory)
+  │   ├── 📂 css (App's styles directory)
+  │   │   ├── 📄 a11y-dark.min.css (App's highlighting stylesheet)
+  │   │   └── 📄 responsive-attributes.css (App's CSS Grid stylesheet)
+  │   ├── 📂 images (App's images directory)
+  │   └── 📂 js (App's scripts directory)
+  └── 📂 views (App's views directory)
+      ├── 📂 components (App's components directory)
+      │   ├── 📄 footer.html (App's reusable footer template)
+      │   ├── 📄 head.html (App's reusable head template)
+      │   ├── 📄 header.html (App's reusable header template)
+      │   └── 📄 main.html (App's reusable main template)
+      ├── 📄 index.md
+      ├── 📂 layouts (App's layouts directory)
+      │   └── 📄 index.html (App's main layout template)
+      └── 📂 pages (App's Markdown pages directory)
+          ├── 📄 add-ids-to-headings.md
+          ├── 📄 basic-usage.md
+          ├── 📄 error-handling.md
+          ├── 📄 installation.md
+          └── 📄 middleware.md
+```
+
 ## Preview {#preview}
 
 To preview the content of the `_site` directory in a browser from an IDE like VS Code, you can follow these steps:
