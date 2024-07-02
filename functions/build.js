@@ -105,6 +105,9 @@ async function build() {
 		createMainRoute()
 		createPageRoute()
 		createError404Route()
+
+		// Notification of successful build completion
+		console.log("Static site built successfully.")
 	} catch (error) {
 		console.error("Build error:", error)
 	}
