@@ -16,8 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "highlight.js": "^11.9.0",
-    "litenode": "^2.1.0",
-    "marked": "^13.0.0",
-    "marked-highlight": "^2.1.2"
+    "litenode": "^2.1.1",
+    "marked": "^13.0.1",
+    "marked-highlight": "^2.1.3"
   }
 }
