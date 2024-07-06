@@ -157,6 +157,15 @@ npm i litenode marked highlight.js marked-highlight
 
 This will install the packages as dependencies. We could have installed them as development dependencies since we are developing locally and the final goal is to generate a static site where none of them will be present or needed, but let's proceed as if we were on a live server where they'll be required for our application to work.
 
+<alert data-sm="2column pad gap">
+    <alert-icon data-sm="middle textC">
+        <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.44.0/icons/info-hexagon.svg" alt="Information SVG" />
+    </alert-icon>
+    <alert-text data-sm="middle textL">
+    <strong>BREAKING CHANGE:</strong> As of version 3.0.0, LiteNode no longer supports being loaded using <code>require</code>. This change aims to maintain and enhance LiteNode in a modular way, which would be difficult to achieve if backward compatibility with CommonJS were maintained.
+    </alert-text>
+</alert>
+
 ## Next {#next}
 
 In the next section, we will delve into the [process](/tutorial/process) of how our application functions.
