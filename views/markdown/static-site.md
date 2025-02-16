@@ -398,31 +398,27 @@ You can easily publish the `_site` directory content on various platforms that h
 
     - [Cloudflare Pages](https://pages.cloudflare.com/) offers a fast, secure, and free way to deploy static sites directly from your Git repository.
 
-3. **Deta Space:**
-
-    - [Deta Space](https://deta.space/) is a platform for hosting personal and collaborative apps, including static sites.
-
-4. **GitHub Pages:**
+3. **GitHub Pages:**
 
     - [GitHub Pages](https://pages.github.com/) allows you to host static sites directly from a GitHub repository. Simply push your `_site` directory to the `gh-pages` branch of your repository.
 
-5. **GitLab Pages:**
+4. **GitLab Pages:**
 
     - [GitLab Pages](https://about.gitlab.com/product/pages/) allows you to host static sites from a GitLab repository. Configure the `.gitlab-ci.yml` file to build and deploy your `_site` directory.
 
-6. **Netlify:**
+5. **Netlify:**
 
     - [Netlify](https://www.netlify.com/) offers a simple way to deploy static sites. You can connect your repository, specify the build command (`npm run build`), and set the publish directory to `_site`.
 
-7. **Render:**
+6. **Render:**
 
     - [Render](https://render.com/) provides a unified cloud platform to deploy static sites quickly and efficiently.
 
-8. **Surge:**
+7. **Surge:**
 
     - [Surge](https://surge.sh/) is a simple and straightforward platform for publishing static sites. Install the Surge CLI and deploy your `_site` directory with a single command.
 
-9. **Vercel:**
+8. **Vercel:**
     - [Vercel](https://vercel.com/) provides seamless deployment for static sites. Connect your repository, and Vercel will automatically handle the build and deployment process. Set the output directory to `_site`.
 
 By using these platforms, you can easily publish and share your static site with others.
