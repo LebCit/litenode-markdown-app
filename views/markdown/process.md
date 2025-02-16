@@ -106,7 +106,6 @@ Here's an example route in LiteNode that demonstrates the entire process:
 
 ```javascript
 import { LiteNode } from "litenode"
-// or const { LiteNode } = require("litenode")
 
 import { marked } from "marked"
 // or const { marked } = require("marked")
