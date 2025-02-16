@@ -168,7 +168,7 @@ that matches your machine's specifications.
 
 ### main entry {#main-entry}
 
-As previously discussed in [Initialization](http://localhost:5000/tutorial/installation#initialization), the `package.json` file serves as a crucial configuration hub for our project. It outlines various settings, including specifying the main file:
+As previously discussed in [Initialization](/tutorial/installation#initialization), the `package.json` file serves as a crucial configuration hub for our project. It outlines various settings, including specifying the main file:
 
 ```json
 "main": "index.js"
