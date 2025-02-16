@@ -78,7 +78,7 @@ In this example, the placeholders `{{ name }}` and `{{ email }}` are replaced wi
 LiteNode includes an integrated Simple Template Engine (STE), designed to streamline template rendering without burdening applications with additional dependencies. STE offers three primary functions:
 
 1. **render(template, data)**: Renders an HTML template with provided data and sends it as the response.
-2. **{{include(filePath)}}**: Embeds an HTML template within another template.
+2. **{{#include(filePath)}}**: Embeds an HTML template within another template.
 3. **renderToFile(template, data, outputPath)**: Renders an HTML template with provided data and saves the resulting HTML to a specified file.
 
 We've utilized STE in our [First File](/tutorial/first-file) as follows:
@@ -135,7 +135,7 @@ By adopting this enhanced directory structure, you establish a solid foundation 
 
 ## Including Templates {#Including Templates}
 
-Now that we've created reusable components, let's integrate them into the main layout template using the `{{include(filePath)}}` directive:
+Now that we've created reusable components, let's integrate them into the main layout template using the `{{#include(filePath)}}` directive:
 
 ### Reusable Components {#Reusable Components}
 
@@ -184,16 +184,16 @@ Now that we've created reusable components, let's integrate them into the main l
 <!DOCTYPE html>
 <html lang="en">
 	<!-- Include head.html in index.html -->
-	{{include("components/head.html")}}
+	{{#include("components/head.html")}}
 	<body>
 		<!-- Include header.html in index.html -->
-		{{include("components/header.html")}}
+		{{#include("components/header.html")}}
 
 		<!-- Include head.html in index.html -->
-		{{include("components/main.html")}}
+		{{#include("components/main.html")}}
 
 		<!-- Include footer.html in index.html -->
-		{{include("components/footer.html")}}
+		{{#include("components/footer.html")}}
 	</body>
 </html>
 ```
@@ -201,7 +201,7 @@ Now that we've created reusable components, let's integrate them into the main l
 ### Explanation {#including-templates-explanation}
 
 -   **Components**: Each component (`head.html`, `header.html`, `main.html`, `footer.html`) is designed to encapsulate specific parts of the HTML structure, making them reusable across different pages.
--   **Main Layout Template (`index.html`)**: This template integrates the components using the `{{include(filePath)}}` directive, ensuring that the structure remains modular and easy to maintain.
+-   **Main Layout Template (`index.html`)**: This template integrates the components using the `{{#include(filePath)}}` directive, ensuring that the structure remains modular and easy to maintain.
 
 ### Testing {#testing}
 
