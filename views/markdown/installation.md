@@ -52,8 +52,8 @@ Here’s a simplified `package.json` file demonstrating dependencies and devDepe
 	"name": "my-nodejs-app",
 	"version": "1.0.0",
 	"dependencies": {
-		"litenode": "^2.0.0",
-		"marked": "^13.0.0"
+		"litenode": "^4.1.0",
+		"marked": "^15.0.7"
 	},
 	"devDependencies": {
 		"jest": "^29.7.0",
