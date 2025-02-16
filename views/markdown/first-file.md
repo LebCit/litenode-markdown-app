@@ -296,7 +296,7 @@ As previously explained, the `index.html` template resides in the `layouts` dire
         <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.44.0/icons/info-hexagon.svg" alt="Information SVG" />
     </alert-icon>
     <alert-text data-sm="middle">
-		<p>In LiteNode, when directly <a href="https://litenode.pages.dev/docs/rendering-templates/#injecting-raw-html-content">injecting raw HTML content into a template</a>, ensure to use the <code>html_</code> property as required.</p>
+		<p>In LiteNode, when directly <a href="https://litenode.pages.dev/docs/rendering-templates/#raw-html">injecting raw HTML content into a template</a>, ensure to use the <code>html_</code> property as required.</p>
     </alert-text>
 </alert>
 
